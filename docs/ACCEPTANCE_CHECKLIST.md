@@ -1,0 +1,23 @@
+# Acceptance Checklist
+
+- 确认项目路径是 `/Users/barbossa/Documents/NAG_REBUILD_YIJI_REFERENCE_20260530`
+- 确认旧项目 `/Users/barbossa/Documents/New project` 未被修改
+- 确认备份 `/Users/barbossa/Documents/NAG_ARCHIVE_BEFORE_RESTART_20260530` 未被删除
+- 确认主导航是：产品 / 艺术家 / 店铺地址 / 艺术事件 / 关于 / 联系我们
+- 确认 `/stories` 页面存在
+- 确认没有再混用 `/works` 和 `/exhibitions` 作为主路由
+- 确认首页具备艺术平台气质，而不是 SaaS / Shopify 模板感
+- 确认 `/products` 可打开，且产品卡可进入详情页
+- 确认 `/artists/[slug]` 能显示该艺术家的产品
+- 确认产品详情可以跳转到对应艺术家
+- 确认 `/events` 和 `/events/[slug]` 可打开
+- 确认 `/stories` 和 `/stories/[slug]` 可打开
+- 确认 `/about` 没有编造品牌故事
+- 确认 `/contact` 只显示已确认联系方式或明确 placeholder
+- 确认 `/stores` 没有虚构具体地址或地图
+- 确认产品价格统一保持 `10000.00 元` placeholder
+- 确认所有无来源字段仍标为 `PLACEHOLDER / needs confirmation / source missing`
+- 确认 `docs/source-index/` 内 5 份索引文件都存在
+- 确认 `docs/STEP1_CONFIRMATION.md`、`docs/PHASE1_EXECUTION_CHECKLIST.md`、`docs/INFORMATION_ARCHITECTURE.md` 都存在
+- 确认 `npm run lint` 通过
+- 确认 `npm run build` 通过

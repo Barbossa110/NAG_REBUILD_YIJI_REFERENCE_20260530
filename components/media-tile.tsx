@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MediaFrame } from "@/components/media-frame";
+import { withAssetPath } from "@/lib/asset-path";
 
 type MediaTileProps = {
   src?: string | null;
@@ -23,6 +24,7 @@ export function MediaTile({
   }
 
   const dark = tone === "dark";
+  const resolvedSrc = withAssetPath(src) ?? src;
 
   return (
     <div
@@ -34,7 +36,7 @@ export function MediaTile({
     >
       <div className="relative aspect-[4/5]">
         <Image
-          src={src}
+          src={resolvedSrc}
           alt={alt}
           fill
           className="object-cover"

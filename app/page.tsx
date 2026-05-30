@@ -36,9 +36,6 @@ export default function Home() {
                 <h1 className="hero-title max-w-4xl">
                   <span className="font-display-en block">Nearly Anything Goes</span>
                 </h1>
-                <p className="hero-subtitle max-w-2xl font-display-cn font-normal">
-                  让艺术成为生活的一部分
-                </p>
                 <p className="body-large max-w-2xl">
                   {siteSettings.missionZh}
                 </p>

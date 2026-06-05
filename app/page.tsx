@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArtistList } from "@/components/artist-list";
 import { EventList } from "@/components/event-list";
-import { MediaTile } from "@/components/media-tile";
 import { SectionHeading } from "@/components/section-heading";
 import { StoryList } from "@/components/story-list";
 import { ProductGrid } from "@/components/product-grid";
@@ -24,78 +23,44 @@ const featuredEvents = events.filter((event) => event.status !== "past").slice(0
 const featuredStories = stories.slice(0, 4);
 const confirmedStoreCities = ["成都", "武汉", "深圳"];
 const heroImage = "/sources/branding/space-image.jpg";
-const heroLogo = "/sources/branding/about-image.jpg";
 
 export default function Home() {
   return (
     <main>
       <section className="fine-rule">
-        <div className="editorial-shell grid min-h-[72svh] gap-8 py-6 md:grid-cols-[1.24fr_0.92fr] md:py-12 lg:gap-14 lg:py-16">
-          <div className="flex flex-col justify-between gap-12">
-            <div className="space-y-4">
-              <div className="space-y-5">
-                <div className="max-w-[360px]">
-                  <Image
-                    src={withAssetPath(heroLogo) ?? heroLogo}
-                    alt="Nearly Anything Goes logo"
-                    width={1080}
-                    height={1080}
-                    className="h-auto w-full"
-                    unoptimized
-                  />
-                </div>
-                <p className="body-large max-w-2xl">
-                  策展式艺术限定零售平台
-                </p>
-              </div>
-            </div>
-
-            <div className="grid gap-6 border-t border-[var(--line)] pt-7 md:grid-cols-3">
-              <div>
-                <p className="section-kicker">Space</p>
-                <p className="body-copy mt-3">
+        <div className="editorial-shell py-5 md:py-8">
+          <div className="relative min-h-[68svh] overflow-hidden border border-[var(--line-strong)] bg-[var(--inverse)] md:min-h-[74svh]">
+            <Image
+              src={withAssetPath(heroImage) ?? heroImage}
+              alt="Nearly Anything Goes space image"
+              fill
+              sizes="100vw"
+              priority
+              className="object-cover"
+              unoptimized
+            />
+            <div className="absolute inset-0 bg-black/25" />
+            <div className="absolute inset-x-0 bottom-0 p-5 text-[var(--surface)] md:p-10 lg:p-14">
+              <p className="text-[0.74rem] leading-none tracking-[0.08em] text-white/76 uppercase">
+                Nearly Anything Goes
+              </p>
+              <h1 className="font-display-en mt-5 max-w-6xl text-[clamp(3rem,8.6vw,8.2rem)] leading-[0.9] tracking-[-0.055em]">
+                Nearly Anything Goes
+              </h1>
+              <p className="font-display-cn mt-5 max-w-3xl text-[clamp(1.3rem,2.7vw,2.45rem)] leading-[1.35] tracking-[-0.02em] text-white/86">
+                策展式艺术限定零售平台
+              </p>
+              <div className="mt-8 grid gap-5 border-t border-white/28 pt-5 md:grid-cols-3">
+                <p className="text-[0.88rem] leading-[1.75] text-white/76">
                   Curated art limited retail space.
                 </p>
-              </div>
-              <div>
-                <p className="section-kicker">Approach</p>
-                <p className="body-copy mt-3">
+                <p className="text-[0.88rem] leading-[1.75] text-white/76">
                   Art, objects, artists, and events are presented with a restrained editorial rhythm.
                 </p>
-              </div>
-              <div>
-                <p className="section-kicker">Now Showing</p>
-                <p className="body-copy mt-3">
+                <p className="text-[0.88rem] leading-[1.75] text-white/76">
                   首店筹备中 / 快闪店即将公布
                   <br />
                   成都 / 武汉 / 深圳
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-6 md:grid-rows-[1.35fr_0.9fr]">
-            <MediaTile
-              src={heroImage}
-              alt="Nearly Anything Goes space image"
-              label="Space image"
-              caption="Nearly Anything Goes"
-              tone="dark"
-            />
-            <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
-              <div className="quiet-card p-6">
-                <p className="section-kicker">Platform</p>
-                <p className="mt-3 font-display-cn text-[1.5rem] leading-[1.08]">
-                  策展式艺术限定零售平台
-                </p>
-                <p className="body-copy mt-3">
-                  Nearly Anything Goes 聚焦艺术作品、艺术家、空间与事件，以策展式浏览方式连接当代艺术与日常生活。
-                </p>
-              </div>
-              <div className="quiet-card bg-[var(--bg-alt)] p-6">
-                <p className="section-kicker">Space</p>
-                <p className="body-copy mt-3">
-                  Products, artists, events, stories, and spatial information are arranged as distinct but connected channels.
                 </p>
               </div>
             </div>

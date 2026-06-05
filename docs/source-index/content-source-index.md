@@ -98,3 +98,12 @@
 | 莫比乌斯环灯2.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/谢臻麟/莫比乌斯环灯2.png | png | needs confirmation | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |
 | 莫比乌斯环灯3.jpg | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/谢臻麟/莫比乌斯环灯3.jpg | jpg | needs confirmation | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |
 | 谢臻麟产品介绍.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/谢臻麟/谢臻麟产品介绍.docx | docx | products | 谢臻麟 | yes | - | auto-scanned from local fact source |
+## 2026-06-06 update package scan
+
+| File / Folder | Path | Type | Possible Section | Possible Artist | Confirmed | Missing Info | Notes |
+|---|---|---|---|---|---|---|---|
+| 需求文件:1 | /Users/barbossa/Desktop/Narture Group/独立站/需求文件:1 | update package | multiple | multiple | yes | - | actual source package used; requested `/需求文件/1` path did not exist |
+| 空间图片.jpg | /Users/barbossa/Desktop/Narture Group/独立站/需求文件:1/空间图片.jpg | jpg | homepage | needs confirmation | yes | - | user explicitly requested this as homepage hero visual |
+| 关于页图片.jpg | /Users/barbossa/Desktop/Narture Group/独立站/需求文件:1/关于页图片.jpg | jpg | about | needs confirmation | yes | - | used as about page image / visual mark |
+| 联系我们页.jpg | /Users/barbossa/Desktop/Narture Group/独立站/需求文件:1/联系我们页.jpg | jpg | contact | needs confirmation | yes | - | used as contact QR image |
+| 艺术家资料 | /Users/barbossa/Desktop/Narture Group/独立站/需求文件:1/艺术家资料 | folder | artists/products | 8 artists | yes | dimensions, years, materials, prices | contains portraits, bios, and product images |

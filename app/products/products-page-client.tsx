@@ -16,7 +16,6 @@ export function ProductsPageClient() {
   const params = useSearchParams();
   const current = {
     artist: params.get("artist") ?? undefined,
-    series: params.get("series") ?? undefined,
     medium: params.get("medium") ?? undefined,
   };
 
@@ -27,7 +26,7 @@ export function ProductsPageClient() {
     <PageShell
       eyebrow="Products"
       title="The product channel behaves like a collection view with quiet pricing."
-      description="Works are presented through a calm index with filtering by artist, series, and medium."
+      description="Works are presented through a calm index with filtering by artist and medium."
     >
       <FilterBar
         basePath="/products"
@@ -43,11 +42,6 @@ export function ProductsPageClient() {
                 value: slug,
               };
             }),
-          },
-          {
-            label: "Series",
-            param: "series",
-            options: options.series.map((series) => ({ label: series, value: series })),
           },
           {
             label: "Medium",

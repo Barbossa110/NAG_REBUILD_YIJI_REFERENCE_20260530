@@ -41,8 +41,8 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-black/25" />
             <div className="absolute inset-x-0 bottom-0 p-5 text-[var(--surface)] md:p-10 lg:p-14">
-              <p className="text-[0.74rem] leading-none tracking-[0.08em] text-white/76 uppercase">
-                Nearly Anything Goes
+              <p className="font-display-en text-[1.5rem] leading-none tracking-[-0.03em] text-white/86 md:text-[1.85rem]">
+                NAG
               </p>
               <h1 className="font-display-en mt-5 max-w-6xl text-[clamp(3rem,8.6vw,8.2rem)] leading-[0.9] tracking-[-0.055em]">
                 Nearly Anything Goes

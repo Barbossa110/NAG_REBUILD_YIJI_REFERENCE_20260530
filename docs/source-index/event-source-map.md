@@ -4,4 +4,3 @@
 |---|---|---|---|---|---|---|---|---|---|
 | 艺术展览 | PLACEHOLDER / needs confirmation | PLACEHOLDER / needs confirmation | upcoming | source missing | source missing | 刘真辰 / 黄鹿 | PANACEA 122 / 《彝衣》 | confirmed | date, location, images, videos |
 | 艺术家访谈 | PLACEHOLDER / needs confirmation | PLACEHOLDER / needs confirmation | current | source missing | source missing | 沈天宇 / 黄鹿 / 孔宇 | 琥珀流 | confirmed | date, location, images, videos |
-| 空间档案 / source missing | PLACEHOLDER / source missing | PLACEHOLDER / source missing | past | source missing | source missing | 单晓明 | 很烧的蜡烛（粉红色） | confirmed | date, location, images, videos |

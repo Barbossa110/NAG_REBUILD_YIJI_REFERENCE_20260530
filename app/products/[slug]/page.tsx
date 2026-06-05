@@ -45,12 +45,12 @@ export default async function ProductDetailPage({
           <MediaTile
             src={product.images[0]}
             alt={product.displayTitle}
-            label={product.series}
-            caption="Artwork image"
+            label=""
+            caption=""
           />
           <div className="space-y-8 lg:pt-2">
             <div>
-              <p className="section-kicker">Product Detail / Archive Entry</p>
+              <p className="section-kicker">Product Detail</p>
               <h1 className="mt-4 font-display-cn text-[2.3rem] leading-[1.02] md:text-[3.8rem]">
                 {product.displayTitle}
               </h1>
@@ -80,9 +80,6 @@ export default async function ProductDetailPage({
               </p>
               <p className="body-copy">
                 {product.descriptionEn}
-              </p>
-              <p className="metadata normal-case tracking-[0.03em]">
-                Source status: {product.sourceStatus} / review: {product.reviewStatus}
               </p>
             </div>
 

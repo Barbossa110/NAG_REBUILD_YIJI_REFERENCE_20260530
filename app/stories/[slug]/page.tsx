@@ -9,13 +9,16 @@ import {
   getProductsBySlugs,
   getStoryBySlug,
 } from "@/lib/filters";
+import { publicOptionalText } from "@/lib/public-display";
 
 type StoryDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return stories.map((story) => ({ slug: story.slug }));
+  return stories
+    .filter((story) => publicOptionalText(story.title))
+    .map((story) => ({ slug: story.slug }));
 }
 
 export default async function StoryDetailPage({ params }: StoryDetailPageProps) {
@@ -26,9 +29,16 @@ export default async function StoryDetailPage({ params }: StoryDetailPageProps) 
     notFound();
   }
 
+  const title = publicOptionalText(story.title);
+  if (!title) {
+    notFound();
+  }
+
   const relatedArtists = getArtistsBySlugs(story.relatedArtists);
   const relatedProducts = getProductsBySlugs(story.relatedProducts);
   const relatedEvents = getEventsBySlugs(story.relatedEvents);
+  const date = publicOptionalText(story.date);
+  const body = publicOptionalText(story.body);
 
   return (
     <main className="fine-rule section-space">
@@ -36,20 +46,23 @@ export default async function StoryDetailPage({ params }: StoryDetailPageProps) 
         <Breadcrumb
           items={[
             { label: "Stories", href: "/stories" },
-            { label: story.title },
+            { label: title },
           ]}
         />
         <p className="section-kicker">{storyTypeLabel(story.type)}</p>
         <h1 className="mt-4 font-display-en text-[2.3rem] leading-[0.98] tracking-[-0.035em] md:text-[4.6rem]">
-          {story.title}
+          {title}
         </h1>
-        <div className="metadata mt-6 flex flex-wrap gap-x-4 gap-y-2 normal-case tracking-[0.03em]">
-          <span>{story.date}</span>
-          <span>{story.sourceStatus}</span>
-        </div>
-        <div className="mt-10 border-t border-[var(--line)] pt-8">
-          <p className="body-large">{story.body}</p>
-        </div>
+        {date ? (
+          <div className="metadata mt-6 flex flex-wrap gap-x-4 gap-y-2 normal-case tracking-[0.03em]">
+            <span>{date}</span>
+          </div>
+        ) : null}
+        {body ? (
+          <div className="mt-10 border-t border-[var(--line)] pt-8">
+            <p className="body-large">{body}</p>
+          </div>
+        ) : null}
         <div className="mt-12 grid gap-6 border-t border-[var(--line)] pt-8 md:grid-cols-3">
           <MetaList
             title="Artists"
@@ -100,7 +113,7 @@ function MetaList({
             </Link>
           ))
         ) : (
-          <p>PLACEHOLDER / needs confirmation</p>
+          <p>暂未公布</p>
         )}
       </div>
     </div>

@@ -9,6 +9,7 @@ import { events } from "@/data/events";
 import { products } from "@/data/products";
 import { stories } from "@/data/stories";
 import { getEventBySlug } from "@/lib/filters";
+import { publicMetadata, publicOptionalText } from "@/lib/public-display";
 
 type EventDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -32,6 +33,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
   );
   const relatedStories = stories.filter((story) => story.relatedEvents.includes(event.slug));
   const siblingEvents = events.filter((entry) => entry.slug !== event.slug);
+  const summary = publicOptionalText(event.summary);
 
   return (
     <main className="fine-rule section-space">
@@ -48,7 +50,6 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
             src={event.images[0]}
             alt={event.title}
             label={`${event.title} key visual`}
-            caption="Event image / PLACEHOLDER"
           />
           <div className="space-y-8 lg:pt-2">
             <div>
@@ -58,16 +59,12 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               </h1>
             </div>
             <dl className="quiet-card grid gap-4 p-5 md:p-6">
-              <MetaRow label="Date" value={event.dateRange} />
-              <MetaRow label="City" value={event.city} />
-              <MetaRow label="Location" value={event.location} />
+              <MetaRow label="Date" value={publicMetadata(event.dateRange) ?? "暂未公布"} />
+              <MetaRow label="City" value={publicMetadata(event.city) ?? "暂未公布"} />
+              <MetaRow label="Location" value={publicMetadata(event.location) ?? "暂未公布"} />
               <MetaRow label="Status" value={event.status} />
             </dl>
-            <p className="body-copy">{event.summary}</p>
-            <p className="body-copy">
-              Time, location, and media remain explicitly marked where
-              information is still incomplete.
-            </p>
+            {summary ? <p className="body-copy">{summary}</p> : null}
           </div>
         </div>
 
@@ -88,9 +85,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
           <div className="quiet-card p-8">
             <p className="section-kicker">Media Area</p>
             <p className="body-copy mt-6">
-              Image gallery: PLACEHOLDER / needs confirmation
-              <br />
-              Video embed: PLACEHOLDER / needs confirmation
+              更多现场图片与影像资料将随项目发布节奏更新。
             </p>
           </div>
         </div>

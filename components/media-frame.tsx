@@ -8,7 +8,7 @@ type MediaFrameProps = {
 };
 
 export function MediaFrame({
-  label = "PLACEHOLDER",
+  label = "Media forthcoming",
   caption,
   tone = "light",
 }: MediaFrameProps) {
@@ -25,7 +25,7 @@ export function MediaFrame({
       <div className="eyebrow">{label}</div>
       <div className="space-y-2">
         <p className="font-display-en text-3xl tracking-[-0.04em] md:text-5xl">
-          Verified media will appear here
+          Media forthcoming
         </p>
         {caption ? (
           <p className={`max-w-lg text-sm leading-7 ${dark ? "text-[rgba(255,255,255,0.72)]" : "text-[var(--muted)]"}`}>

@@ -11,6 +11,7 @@ import {
   filterArtists,
   sortArtistsForDisplay,
 } from "@/lib/filters";
+import { publicMetadata } from "@/lib/public-display";
 
 export function ArtistsPageClient() {
   const params = useSearchParams();
@@ -59,12 +60,20 @@ export function ArtistsPageClient() {
           {
             label: "Medium",
             param: "medium",
-            options: options.mediums.map((medium) => ({ label: medium, value: medium })),
+            options: options.mediums
+              .map((medium) => ({ label: publicMetadata(medium), value: medium }))
+              .filter((option): option is { label: string; value: string } =>
+                Boolean(option.label),
+              ),
           },
           {
             label: "City",
             param: "city",
-            options: options.cities.map((city) => ({ label: city, value: city })),
+            options: options.cities
+              .map((city) => ({ label: publicMetadata(city), value: city }))
+              .filter((option): option is { label: string; value: string } =>
+                Boolean(option.label),
+              ),
           },
         ]}
       />

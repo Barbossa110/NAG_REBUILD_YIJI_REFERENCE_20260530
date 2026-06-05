@@ -44,9 +44,11 @@ export function MediaTile({
         />
       </div>
       <div className="space-y-2 p-5">
-        <p className={`tag-label ${dark ? "text-[rgba(255,255,255,0.62)]" : "text-[var(--muted)]"}`}>
-          {label}
-        </p>
+        {label ? (
+          <p className={`tag-label ${dark ? "text-[rgba(255,255,255,0.62)]" : "text-[var(--muted)]"}`}>
+            {label}
+          </p>
+        ) : null}
         {caption ? (
           <p
             className={`body-copy ${

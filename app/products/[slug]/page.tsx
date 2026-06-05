@@ -7,6 +7,7 @@ import { ProductGrid } from "@/components/product-grid";
 import { artists } from "@/data/artists";
 import { products } from "@/data/products";
 import { getPrevNextProducts, getProductBySlug, getRelatedProducts } from "@/lib/filters";
+import { publicMetadata, publicOptionalText, publicText } from "@/lib/public-display";
 
 type ProductDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -30,6 +31,8 @@ export default async function ProductDetailPage({
   const artist = artists.find((entry) => entry.slug === product.artistSlug);
   const { previous, next } = getPrevNextProducts(product.slug);
   const relatedProducts = getRelatedProducts(product.slug, product.artistSlug);
+  const descriptionZh = publicOptionalText(product.descriptionZh);
+  const descriptionEn = publicOptionalText(product.descriptionEn);
 
   return (
     <main className="fine-rule section-space">
@@ -60,9 +63,9 @@ export default async function ProductDetailPage({
             </div>
 
             <dl className="quiet-card grid gap-4 p-5 md:p-6">
-              <MetaRow label="Year" value={product.year} />
-              <MetaRow label="Medium" value={product.medium} />
-              <MetaRow label="Dimensions" value={product.dimensions} />
+              <MetaRow label="Year" value={publicText(product.year)} />
+              <MetaRow label="Medium" value={publicMetadata(product.medium) ?? "暂未公布"} />
+              <MetaRow label="Dimensions" value={publicText(product.dimensions)} />
               <MetaRow
                 label="Price"
                 value={
@@ -73,15 +76,13 @@ export default async function ProductDetailPage({
               />
             </dl>
 
-            <div className="space-y-4">
-              <p className="section-kicker">Description</p>
-              <p className="body-copy">
-                {product.descriptionZh}
-              </p>
-              <p className="body-copy">
-                {product.descriptionEn}
-              </p>
-            </div>
+            {descriptionZh || descriptionEn ? (
+              <div className="space-y-4">
+                <p className="section-kicker">Description</p>
+                {descriptionZh ? <p className="body-copy">{descriptionZh}</p> : null}
+                {descriptionEn ? <p className="body-copy">{descriptionEn}</p> : null}
+              </div>
+            ) : null}
 
             {artist ? (
               <Link

@@ -6,6 +6,7 @@ import { ProductGrid } from "@/components/product-grid";
 import { artists } from "@/data/artists";
 import { EventList } from "@/components/event-list";
 import { getEventsByArtist, getProductsByArtist } from "@/lib/filters";
+import { publicMetadataList, publicText } from "@/lib/public-display";
 
 type ArtistDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -27,6 +28,7 @@ export default async function ArtistDetailPage({
 
   const artistProducts = getProductsByArtist(artist.slug);
   const relatedEvents = getEventsByArtist(artist.slug);
+  const mediums = publicMetadataList(artist.mediums);
 
   return (
     <main className="fine-rule section-space">
@@ -55,11 +57,13 @@ export default async function ArtistDetailPage({
             <div className="quiet-card grid gap-4 p-5 md:p-6">
               <div className="grid grid-cols-[92px_1fr] gap-4 md:grid-cols-[110px_1fr]">
                 <span className="metadata">City</span>
-                <span className="body-copy text-[var(--ink)]">{artist.city}</span>
+                <span className="body-copy text-[var(--ink)]">{publicText(artist.city)}</span>
               </div>
               <div className="grid grid-cols-[92px_1fr] gap-4 md:grid-cols-[110px_1fr]">
                 <span className="metadata">Mediums</span>
-                <span className="body-copy text-[var(--ink)]">{artist.mediums.join(" / ")}</span>
+                <span className="body-copy text-[var(--ink)]">
+                  {mediums.length ? mediums.join(" / ") : "暂未公布"}
+                </span>
               </div>
             </div>
             <div className="space-y-4">
@@ -81,7 +85,7 @@ export default async function ArtistDetailPage({
               />
             )) : (
               <MediaTile
-                label={`${artist.nameZh} gallery / PLACEHOLDER`}
+                label="Gallery image"
                 alt={artist.nameZh}
               />
             )}

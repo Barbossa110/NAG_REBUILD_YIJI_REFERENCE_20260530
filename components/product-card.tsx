@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { artists } from "@/data/artists";
 import { MediaTile } from "@/components/media-tile";
-import { getSourceStatusLabel, getSourceStatusTone } from "@/lib/source-status";
+import { publicMetadata } from "@/lib/public-display";
 import type { Product } from "@/lib/types";
 
 export function ProductCard({
@@ -13,17 +13,14 @@ export function ProductCard({
 }) {
   const artist = artists.find((entry) => entry.slug === product.artistSlug);
   const indexLabel = String(index).padStart(2, "0");
+  const medium = publicMetadata(product.medium);
 
   return (
     <div className="quiet-card space-y-5 p-5 md:p-6">
       <Link href={`/products/${product.slug}`} className="group block space-y-5">
         <div className="flex items-start justify-between gap-4">
           <span className="index-mark">{indexLabel}</span>
-          <span
-            className={`status-chip ${getSourceStatusTone(product.sourceStatus)}`}
-          >
-            {getSourceStatusLabel(product.sourceStatus)}
-          </span>
+          <span className="tag-label text-[var(--muted)]">Archive item</span>
         </div>
         <div className="relative">
           <MediaTile
@@ -43,7 +40,9 @@ export function ProductCard({
         </div>
       </Link>
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-[var(--line)] pt-4">
-        <p className="tag-label text-[var(--muted)]">{product.medium}</p>
+        {medium ? (
+          <p className="tag-label text-[var(--muted)]">{medium}</p>
+        ) : null}
         <Link href="/contact" className="tag-label text-[var(--muted)] underline-offset-2 hover:underline">
           联系询价
         </Link>

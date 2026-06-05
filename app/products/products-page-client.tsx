@@ -11,6 +11,7 @@ import {
   productFilterOptions,
   sortProductsForDisplay,
 } from "@/lib/filters";
+import { publicMetadata } from "@/lib/public-display";
 
 export function ProductsPageClient() {
   const params = useSearchParams();
@@ -46,7 +47,11 @@ export function ProductsPageClient() {
           {
             label: "Medium",
             param: "medium",
-            options: options.mediums.map((medium) => ({ label: medium, value: medium })),
+            options: options.mediums
+              .map((medium) => ({ label: publicMetadata(medium), value: medium }))
+              .filter((option): option is { label: string; value: string } =>
+                Boolean(option.label),
+              ),
           },
         ]}
       />

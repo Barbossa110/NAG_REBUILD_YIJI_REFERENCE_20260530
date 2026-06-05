@@ -6,7 +6,7 @@ export default function StoresPage() {
     <PageShell
       eyebrow="Stores"
       title="Store information stays factual and restrained."
-      description="Current space information, city references, and future visit details."
+      description="Current city references and publication status."
     >
       <div className="grid gap-8 md:grid-cols-3">
         {stores.map((store) => (
@@ -19,17 +19,17 @@ export default function StoresPage() {
               {store.name}
             </h2>
             <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-              {store.addressRaw}
+              暂未公布
             </p>
             <p className="mt-6 text-sm leading-7 text-[var(--muted)]">
               {store.notes}
             </p>
             <p className="mt-6 text-sm leading-7 text-[var(--muted)]">
-              Map: needs confirmation
+              Map: 暂未公布
               <br />
-              Opening hours: needs confirmation
+              Opening hours: 暂未公布
               <br />
-              Accessibility info: source missing
+              Accessibility info: 暂未公布
             </p>
           </article>
         ))}

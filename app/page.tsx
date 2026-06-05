@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArtistList } from "@/components/artist-list";
 import { EventList } from "@/components/event-list";
@@ -8,8 +9,8 @@ import { ProductGrid } from "@/components/product-grid";
 import { artists } from "@/data/artists";
 import { events } from "@/data/events";
 import { products } from "@/data/products";
-import { siteSettings } from "@/data/site-settings";
 import { stories } from "@/data/stories";
+import { withAssetPath } from "@/lib/asset-path";
 
 const curatedProductSlugs = ["panacea-122", "琥珀流", "彝衣", "大姜-giant-ginger", "海晏瑶", "莫比乌斯环灯1"];
 const featuredProducts = curatedProductSlugs
@@ -22,8 +23,8 @@ const featuredArtists = curatedArtistSlugs
 const featuredEvents = events.filter((event) => event.status !== "past").slice(0, 2);
 const featuredStories = stories.slice(0, 4);
 const confirmedStoreCities = ["成都", "武汉", "深圳"];
-const heroProduct = products.find((product) => product.slug === "panacea-122") ?? products[0];
-const heroArtist = artists.find((artist) => artist.slug === heroProduct.artistSlug);
+const heroImage = "/sources/branding/space-image.jpg";
+const heroLogo = "/sources/branding/about-image.jpg";
 
 export default function Home() {
   return (
@@ -33,11 +34,18 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-12">
             <div className="space-y-4">
               <div className="space-y-5">
-                <h1 className="hero-title max-w-4xl">
-                  <span className="font-display-en block">Nearly Anything Goes</span>
-                </h1>
+                <div className="max-w-[360px]">
+                  <Image
+                    src={withAssetPath(heroLogo) ?? heroLogo}
+                    alt="Nearly Anything Goes logo"
+                    width={1080}
+                    height={1080}
+                    className="h-auto w-full"
+                    unoptimized
+                  />
+                </div>
                 <p className="body-large max-w-2xl">
-                  {siteSettings.missionZh}
+                  策展式艺术限定零售平台
                 </p>
               </div>
             </div>
@@ -58,7 +66,7 @@ export default function Home() {
               <div>
                 <p className="section-kicker">Now Showing</p>
                 <p className="body-copy mt-3">
-                  {siteSettings.storeStatus}
+                  首店筹备中 / 快闪店即将公布
                   <br />
                   成都 / 武汉 / 深圳
                 </p>
@@ -68,31 +76,26 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-rows-[1.35fr_0.9fr]">
             <MediaTile
-              src={heroProduct.images[0]}
-              alt={heroProduct.displayTitle}
-              label={heroProduct.series}
-              caption={
-                heroArtist
-                  ? `${heroArtist.nameZh} / ${heroArtist.nameEn}`
-                  : "Artist"
-              }
+              src={heroImage}
+              alt="Nearly Anything Goes space image"
+              label="Space image"
+              caption="Nearly Anything Goes"
               tone="dark"
             />
             <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
               <div className="quiet-card p-6">
-                <p className="section-kicker">Current Highlight</p>
+                <p className="section-kicker">Platform</p>
                 <p className="mt-3 font-display-cn text-[1.5rem] leading-[1.08]">
-                  {heroProduct.displayTitle}
+                  策展式艺术限定零售平台
                 </p>
                 <p className="body-copy mt-3">
-                  {heroProduct.descriptionZh}
+                  Nearly Anything Goes 聚焦艺术作品、艺术家、空间与事件，以策展式浏览方式连接当代艺术与日常生活。
                 </p>
               </div>
               <div className="quiet-card bg-[var(--bg-alt)] p-6">
-                <p className="section-kicker">Platform</p>
+                <p className="section-kicker">Space</p>
                 <p className="body-copy mt-3">
-                  Products, artists, events, stories, and spatial information
-                  are arranged as distinct but connected channels.
+                  Products, artists, events, stories, and spatial information are arranged as distinct but connected channels.
                 </p>
               </div>
             </div>
@@ -148,19 +151,19 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="quiet-card p-6">
               <p className="section-kicker">Current Status</p>
-              <p className="mt-4 text-[1.2rem] leading-tight">{siteSettings.storeStatus}</p>
+              <p className="mt-4 text-[1.2rem] leading-tight">暂未公布</p>
               <p className="body-copy mt-4">
-                Confirmed city references: 成都 / 武汉 / 深圳
+                成都 / 武汉 / 深圳
                 <br />
-                Address: PLACEHOLDER / needs confirmation
+                其余信息：暂未公布
               </p>
             </div>
             <div className="quiet-card p-6">
               <p className="section-kicker">Visit Notes</p>
               <p className="body-copy mt-4">
-                Confirmed city references: {confirmedStoreCities.join(" / ")}.
-                Opening hour, floor plan, and transport guidance remain hidden
-                until a verifiable source is available.
+                {confirmedStoreCities.join(" / ")}
+                <br />
+                其余信息：暂未公布
               </p>
             </div>
           </div>
@@ -191,7 +194,7 @@ export default function Home() {
           </div>
           <div className="quiet-card space-y-6 p-8">
             <p className="font-display-cn text-[1.8rem] leading-[1.22] md:text-[2.2rem]">
-              {siteSettings.missionZh}
+              策展式艺术限定零售平台
             </p>
             <p className="body-copy">
               Nearly Anything Goes is a curated art limited retail space where

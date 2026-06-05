@@ -56,6 +56,42 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
+    "slug": "永生蝴蝶",
+    "titleRaw": "永生蝴蝶",
+    "displayTitle": "永生蝴蝶",
+    "artistSlug": "dabeiyuzhou",
+    "images": [
+      "/sources/products/大悲宇宙/永生蝴蝶.png"
+    ],
+    "series": "Digital sculpture / needs confirmation",
+    "medium": "Digital sculpture / needs confirmation",
+    "dimensions": "PLACEHOLDER / source missing",
+    "year": "PLACEHOLDER / source missing",
+    "pricePlaceholder": "10000.00 元",
+    "descriptionZh": "PLACEHOLDER / needs confirmation",
+    "descriptionEn": "PLACEHOLDER / needs confirmation",
+    "sourceStatus": "confirmed",
+    "reviewStatus": "needs review"
+  },
+  {
+    "slug": "永生蝴蝶2",
+    "titleRaw": "永生蝴蝶2",
+    "displayTitle": "永生蝴蝶 2",
+    "artistSlug": "dabeiyuzhou",
+    "images": [
+      "/sources/products/大悲宇宙/永生蝴蝶2.png"
+    ],
+    "series": "Digital sculpture / needs confirmation",
+    "medium": "Digital sculpture / needs confirmation",
+    "dimensions": "PLACEHOLDER / source missing",
+    "year": "PLACEHOLDER / source missing",
+    "pricePlaceholder": "10000.00 元",
+    "descriptionZh": "PLACEHOLDER / needs confirmation",
+    "descriptionEn": "PLACEHOLDER / needs confirmation",
+    "sourceStatus": "confirmed",
+    "reviewStatus": "needs review"
+  },
+  {
     "slug": "彝衣",
     "titleRaw": "《彝衣》",
     "displayTitle": "《彝衣》",
@@ -651,11 +687,11 @@ export const products: Product[] = [
   },
   {
     "slug": "pripan236",
-    "titleRaw": "PRIPAN236",
-    "displayTitle": "PRIPAN 236",
+    "titleRaw": "PANACEA236",
+    "displayTitle": "PANACEA 236",
     "artistSlug": "liu-zhenchen",
     "images": [
-      "/sources/products/刘真辰/PRIPAN236.png"
+      "/sources/products/刘真辰/PANACEA236.png"
     ],
     "series": "Panacea",
     "medium": "Plant and mineral image generation / needs confirmation",
@@ -1011,29 +1047,29 @@ export const products: Product[] = [
   },
   {
     "slug": "breathing",
-    "titleRaw": "Breathing ",
+    "titleRaw": "Breathing Color",
     "displayTitle": "Breathing Color",
     "artistSlug": "xie-zhenlin",
     "images": [
-      "/sources/products/谢臻麟-extra/Breathing%20.jpg"
+      "/sources/products/%E8%AC%9D%E9%8E%AE%E7%92%98/Breathing%20Color.jpg"
     ],
     "series": "needs confirmation",
     "medium": "Lenticular artwork / lighting object / needs confirmation",
     "dimensions": "PLACEHOLDER / source missing",
     "year": "PLACEHOLDER / source missing",
     "pricePlaceholder": "10000.00 元",
-    "descriptionZh": "《Gradient Speaker》是一件光栅艺术作品，将动态色彩与声波扩散般的节奏转化为可收藏的实体形式。",
-    "descriptionEn": "Gradient Speaker turns flowing chromatic motion into a collectible lenticular object with the rhythm of expanding sound waves.",
+    "descriptionZh": "《Breathing Color》是一件光栅艺术作品，将动态色彩语言转化为实体艺术形式，画面随观看角度产生细微变化。",
+    "descriptionEn": "Breathing Color is a lenticular artwork that translates dynamic color language into a physical piece with shifting perception.",
     "sourceStatus": "confirmed",
     "reviewStatus": "needs review"
   },
   {
     "slug": "gradient",
     "titleRaw": "Gradient",
-    "displayTitle": "Gradient Speaker",
+    "displayTitle": "Gradient",
     "artistSlug": "xie-zhenlin",
     "images": [
-      "/sources/products/谢臻麟-extra/Gradient.jpg"
+      "/sources/products/%E8%AC%9D%E9%8E%AE%E7%92%98/Gradient.jpg"
     ],
     "series": "needs confirmation",
     "medium": "Lenticular artwork / lighting object / needs confirmation",
@@ -1051,7 +1087,25 @@ export const products: Product[] = [
     "displayTitle": "Spark",
     "artistSlug": "xie-zhenlin",
     "images": [
-      "/sources/products/谢臻麟-extra/Spark.jpg"
+      "/sources/products/%E8%AC%9D%E9%8E%AE%E7%92%98/Spark.jpg"
+    ],
+    "series": "needs confirmation",
+    "medium": "Lenticular artwork / lighting object / needs confirmation",
+    "dimensions": "PLACEHOLDER / source missing",
+    "year": "PLACEHOLDER / source missing",
+    "pricePlaceholder": "10000.00 元",
+    "descriptionZh": "谢臻麟相关作品说明已确认存在，单件尺寸、年份与价格仍需确认。",
+    "descriptionEn": "A verified statement exists for the broader body of work, while artwork-specific size, year, and price still need confirmation.",
+    "sourceStatus": "confirmed",
+    "reviewStatus": "needs review"
+  },
+  {
+    "slug": "mobius",
+    "titleRaw": "Möbius",
+    "displayTitle": "Mobius",
+    "artistSlug": "xie-zhenlin",
+    "images": [
+      "/sources/products/%E8%AC%9D%E9%8E%AE%E7%92%98/Mobius.png"
     ],
     "series": "needs confirmation",
     "medium": "Lenticular artwork / lighting object / needs confirmation",

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/breadcrumb";
@@ -62,7 +63,14 @@ export default async function ProductDetailPage({
               <MetaRow label="Year" value={product.year} />
               <MetaRow label="Medium" value={product.medium} />
               <MetaRow label="Dimensions" value={product.dimensions} />
-              <MetaRow label="Price" value={product.pricePlaceholder} />
+              <MetaRow
+                label="Price"
+                value={
+                  <Link href="/contact" className="underline-offset-2 hover:underline">
+                    联系询价
+                  </Link>
+                }
+              />
             </dl>
 
             <div className="space-y-4">
@@ -118,7 +126,7 @@ export default async function ProductDetailPage({
   );
 }
 
-function MetaRow({ label, value }: { label: string; value: string }) {
+function MetaRow({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className="grid grid-cols-[92px_1fr] gap-4 border-b border-[var(--line)] pb-4 last:border-b-0 last:pb-0 md:grid-cols-[110px_1fr]">
       <dt className="metadata">{label}</dt>

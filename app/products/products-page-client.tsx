@@ -38,7 +38,10 @@ export function ProductsPageClient() {
             param: "artist",
             options: options.artists.map((slug) => {
               const artist = artists.find((entry) => entry.slug === slug);
-              return { label: artist?.nameZh ?? slug, value: slug };
+              return {
+                label: artist ? `${artist.nameZh} / ${artist.nameEn}` : slug,
+                value: slug,
+              };
             }),
           },
           {

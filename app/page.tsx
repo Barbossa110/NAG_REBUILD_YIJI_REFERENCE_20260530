@@ -1,14 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArtistList } from "@/components/artist-list";
-import { EventList } from "@/components/event-list";
 import { SectionHeading } from "@/components/section-heading";
-import { StoryList } from "@/components/story-list";
 import { ProductGrid } from "@/components/product-grid";
 import { artists } from "@/data/artists";
-import { events } from "@/data/events";
 import { products } from "@/data/products";
-import { stories } from "@/data/stories";
 import { withAssetPath } from "@/lib/asset-path";
 
 const curatedProductSlugs = ["panacea-122", "琥珀流", "大姜-giant-ginger", "海晏瑶", "莫比乌斯环灯1"];
@@ -19,9 +15,6 @@ const curatedArtistSlugs = ["liu-zhenchen", "kong-yu", "jeremie-thircuir", "xie-
 const featuredArtists = curatedArtistSlugs
   .map((slug) => artists.find((artist) => artist.slug === slug))
   .filter((artist): artist is NonNullable<typeof artist> => Boolean(artist));
-const featuredEvents = events.filter((event) => event.status !== "past").slice(0, 2);
-const featuredStories = stories.slice(0, 4);
-const storeCities = ["成都", "武汉", "深圳"];
 const heroImage = "/sources/branding/space-image.jpg";
 
 export default function Home() {
@@ -72,7 +65,7 @@ export default function Home() {
         <div className="editorial-shell">
           <SectionHeading
             eyebrow="Featured Products"
-            title="Works and limited objects are arranged for slow looking."
+            title="works"
             description="Images, artist names, materials, and inquiry stay quiet, with the work kept at the center."
             action={{ href: "/products", label: "View products" }}
           />
@@ -84,7 +77,7 @@ export default function Home() {
         <div className="editorial-shell">
           <SectionHeading
             eyebrow="Featured Artists"
-            title="Artists appear as individual chapters within the NAG platform."
+            title="Artist"
             description="Each profile gathers practice, works, and related encounters with room for individual voice."
             action={{ href: "/artists", label: "Browse artists" }}
           />
@@ -96,82 +89,11 @@ export default function Home() {
         <div className="editorial-shell">
           <SectionHeading
             eyebrow="Events / Program"
-            title="Public programs, conversations, and gatherings form the living side of NAG."
+            title="Events"
             description="Events connect artists, works, images, and audiences through a calm editorial sequence."
             action={{ href: "/events", label: "View events", inverse: true }}
             inverse
           />
-          <EventList events={featuredEvents} inverse />
-        </div>
-      </section>
-
-      <section className="section-space fine-rule">
-        <div className="editorial-shell grid gap-12 lg:grid-cols-[1fr_1.2fr]">
-          <SectionHeading
-            eyebrow="Store / Visit"
-            title="Visit information will be announced city by city."
-            description="Only city anchors are shown for now; address and opening details remain intentionally quiet until ready."
-            action={{ href: "/stores", label: "Visit notes" }}
-          />
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="quiet-card p-6">
-              <p className="section-kicker">Opening Rhythm</p>
-              <p className="mt-4 text-[1.2rem] leading-tight">暂未公布</p>
-              <p className="body-copy mt-4">
-                成都 / 武汉 / 深圳
-                <br />
-                其余信息：暂未公布
-              </p>
-            </div>
-            <div className="quiet-card p-6">
-              <p className="section-kicker">City Anchors</p>
-              <p className="body-copy mt-4">
-                {storeCities.join(" / ")}
-                <br />
-                其余信息：暂未公布
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space fine-rule">
-        <div className="editorial-shell">
-          <SectionHeading
-            eyebrow="Stories / Editorial"
-            title="Stories follows the conversations, images, and notes around NAG."
-            description="Interviews, moving image, press notes, and editorial fragments sit beside the works they orbit."
-            action={{ href: "/stories", label: "Open stories" }}
-          />
-          <StoryList stories={featuredStories} />
-        </div>
-      </section>
-
-      <section className="section-space fine-rule">
-        <div className="editorial-shell grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <SectionHeading
-              eyebrow="About NAG"
-              title="A concise reading of the platform's position, tone, and spatial imagination."
-              description="The introduction keeps NAG clear and direct without turning the page into corporate copy."
-              action={{ href: "/about", label: "Read about NAG" }}
-            />
-          </div>
-          <div className="quiet-card space-y-6 p-8">
-            <p className="font-display-cn text-[1.8rem] leading-[1.22] md:text-[2.2rem]">
-              策展式艺术限定零售平台
-            </p>
-            <p className="body-copy">
-              Nearly Anything Goes is a curated art limited retail space where
-              art, commerce, and cultural life co-exist.
-            </p>
-            <Link
-              href="/about"
-              className="inline-flex border-b border-[var(--ink)] pb-1 text-sm"
-            >
-              Continue
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -180,14 +102,14 @@ export default function Home() {
           <div>
             <p className="section-kicker">Contact</p>
             <h2 className="section-title mt-4 max-w-3xl text-[2rem] md:text-[3.15rem]">
-              For visits, collaborations, and artwork inquiries.
+              Contact us
             </h2>
           </div>
           <Link
             href="/contact"
-            className="inline-flex h-11 items-center border border-[var(--ink)] px-6 text-sm transition-colors hover:bg-[var(--ink)] hover:text-[var(--surface)]"
+            className="body-copy max-w-md border-b border-[var(--ink)] pb-1 text-left transition-colors hover:text-[var(--muted)]"
           >
-            Contact us
+            For visits, collaborations, and artwork inquiries.
           </Link>
         </div>
       </section>

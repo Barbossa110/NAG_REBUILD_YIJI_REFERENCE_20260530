@@ -17,7 +17,7 @@ export function PageShell({
     <main>
       <section className="fine-rule section-space">
         <div className="editorial-shell space-y-5">
-          <p className="section-kicker">{eyebrow}</p>
+          {eyebrow ? <p className="section-kicker">{eyebrow}</p> : null}
           <h1 className="section-title max-w-5xl">
             <span className="font-display-en block">{title}</span>
           </h1>

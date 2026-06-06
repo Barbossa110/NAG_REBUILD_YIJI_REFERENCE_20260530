@@ -5,7 +5,7 @@ import { withAssetPath } from "@/lib/asset-path";
 export default function ContactPage() {
   return (
     <PageShell
-      eyebrow="Contact"
+      eyebrow=""
       title="Contact"
       description="For artwork inquiries, visits, collaborations, and direct contact."
     >

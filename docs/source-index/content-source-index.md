@@ -9,16 +9,15 @@
 | 杰瑞米产品介绍.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站产品-文本2级/杰瑞米产品介绍.docx | docx | products | 杰瑞米, Jeremie Thircuir | yes | - | auto-scanned from local fact source |
 | 沈天宇产品介绍.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站产品-文本2级/沈天宇产品介绍.docx | docx | products | 沈天宇 | yes | - | auto-scanned from local fact source |
 | 谢臻麟产品介绍.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站产品-文本2级/谢臻麟产品介绍.docx | docx | products | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |
-| 黄鹿产品介绍.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站产品-文本2级/黄鹿产品介绍.docx | docx | products | 黄鹿 | yes | - | auto-scanned from local fact source |
 | 产品.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站文本1级/产品.docx | docx | products | needs confirmation | yes | - | auto-scanned from local fact source |
 | 关于.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站文本1级/关于.docx | docx | about | needs confirmation | yes | - | auto-scanned from local fact source |
 | 线下店.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站文本1级/线下店.docx | docx | stores | needs confirmation | yes | - | auto-scanned from local fact source |
 | 联系我们.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站文本1级/联系我们.docx | docx | contact | needs confirmation | yes | - | auto-scanned from local fact source |
 | 艺术事件.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站文本1级/艺术事件.docx | docx | events | needs confirmation | yes | - | auto-scanned from local fact source |
-| 艺术家.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站文本1级/艺术家.docx | docx | artists | 大悲宇宙, 单晓明, 刘真辰, 孔宇, Jeremie Thircuir, 沈天宇, 谢臻麟, 黄鹿 | yes | - | auto-scanned from local fact source |
-| 艺术家访谈.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术事件-文本2级/艺术家访谈.docx | docx | events | 孔宇, 沈天宇, 黄鹿 | yes | - | auto-scanned from local fact source |
+| 艺术家.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站文本1级/艺术家.docx | docx | artists | 大悲宇宙, 单晓明, 刘真辰, 孔宇, Jeremie Thircuir, 沈天宇, 谢臻麟 | yes | - | auto-scanned from local fact source |
+| 艺术家访谈.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术事件-文本2级/艺术家访谈.docx | docx | events | 孔宇, 沈天宇 | yes | - | auto-scanned from local fact source |
 | 艺术展览.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术事件-文本2级/艺术展览.docx | docx | events | needs confirmation | needs confirmation | - | auto-scanned from local fact source |
-| 艺术家.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家文本2级/艺术家.docx | docx | artists | 大悲宇宙, 黄鹿 | yes | - | auto-scanned from local fact source |
+| 艺术家.docx | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家文本2级/艺术家.docx | docx | artists | 大悲宇宙 | yes | - | auto-scanned from local fact source |
 | Portrait by Stephen Chow_1_杰瑞米 Jeremie Thircuir_来自小红书网页版.jpg | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家照片/Jeremie Thircuir/Portrait by Stephen Chow_1_杰瑞米 Jeremie Thircuir_来自小红书网页版.jpg | jpg | artists | 杰瑞米, Jeremie Thircuir | needs confirmation | - | auto-scanned from local fact source |
 | 截屏2026-05-26 16.43.26.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家照片/刘真辰/截屏2026-05-26 16.43.26.png | png | artists | 刘真辰 | needs confirmation | - | auto-scanned from local fact source |
 | 截屏2026-05-26 16.42.05.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家照片/单晓明/截屏2026-05-26 16.42.05.png | png | artists | 单晓明 | needs confirmation | - | auto-scanned from local fact source |
@@ -27,8 +26,6 @@
 | 截屏2026-05-26 16.43.54.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家照片/孔宇/截屏2026-05-26 16.43.54.png | png | artists | 孔宇 | needs confirmation | - | auto-scanned from local fact source |
 | desert racing_1_Sean 沈天宇_来自小红书网页版.jpg | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家照片/沈天宇/desert racing_1_Sean 沈天宇_来自小红书网页版.jpg | jpg | artists | 沈天宇 | needs confirmation | - | auto-scanned from local fact source |
 | 截屏2026-05-26 16.41.06.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家照片/谢臻麟/截屏2026-05-26 16.41.06.png | png | artists | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |
-| 2026北京当代艺术博览会论坛现场_1_大鹿_来自小红书网页版.jpg | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家照片/黄鹿/2026北京当代艺术博览会论坛现场_1_大鹿_来自小红书网页版.jpg | jpg | artists | 黄鹿 | needs confirmation | - | auto-scanned from local fact source |
-| 截屏2026-05-26 17.21.14.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/NAG空间独立站艺术家照片/黄鹿/截屏2026-05-26 17.21.14.png | png | artists | 黄鹿 | needs confirmation | - | auto-scanned from local fact source |
 | Lotus & Rose.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/Jeremie Thircuir/Lotus & Rose.png | png | products | Jeremie Thircuir | needs confirmation | - | auto-scanned from local fact source |
 | Rose.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/Jeremie Thircuir/Rose.png | png | products | Jeremie Thircuir | needs confirmation | - | auto-scanned from local fact source |
 | 南瓜 3 Pumpkin 3.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/Jeremie Thircuir/南瓜 3 Pumpkin 3.png | png | products | Jeremie Thircuir | needs confirmation | - | auto-scanned from local fact source |
@@ -86,11 +83,6 @@
 | 莫比乌斯环灯1.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/谢臻麟/莫比乌斯环灯1.png | png | products | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |
 | 莫比乌斯环灯2.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/谢臻麟/莫比乌斯环灯2.png | png | products | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |
 | 莫比乌斯环灯3.jpg | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/谢臻麟/莫比乌斯环灯3.jpg | jpg | products | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |
-| 《彝衣》.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/黄鹿/《彝衣》.png | png | products | 黄鹿 | needs confirmation | - | auto-scanned from local fact source |
-| 《檐柱》.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/黄鹿/《檐柱》.png | png | products | 黄鹿 | needs confirmation | - | auto-scanned from local fact source |
-| 《琅玕》单节.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/黄鹿/《琅玕》单节.png | png | products | 黄鹿 | needs confirmation | - | auto-scanned from local fact source |
-| 《琅玕》双节.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/黄鹿/《琅玕》双节.png | png | products | 黄鹿 | needs confirmation | - | auto-scanned from local fact source |
-| 《罗锅》.png | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/产品照片/黄鹿/《罗锅》.png | png | products | 黄鹿 | needs confirmation | - | auto-scanned from local fact source |
 | Breathing .jpg | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/谢臻麟/Breathing .jpg | jpg | needs confirmation | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |
 | Gradient.jpg | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/谢臻麟/Gradient.jpg | jpg | needs confirmation | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |
 | Spark.jpg | /Users/barbossa/Desktop/Narture Group/独立站/NAG空间独立站/谢臻麟/Spark.jpg | jpg | needs confirmation | 谢臻麟 | needs confirmation | - | auto-scanned from local fact source |

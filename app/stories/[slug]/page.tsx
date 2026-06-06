@@ -72,7 +72,7 @@ export default async function StoryDetailPage({ params }: StoryDetailPageProps) 
             }))}
           />
           <MetaList
-            title="Products"
+            title="Works"
             items={relatedProducts.map((product) => ({
               label: product.displayTitle,
               href: `/products/${product.slug}`,

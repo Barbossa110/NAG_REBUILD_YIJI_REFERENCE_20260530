@@ -10,13 +10,13 @@ export function SiteFooter() {
             Nearly Anything Goes
           </p>
           <p className="body-copy max-w-md">
-            A curated art limited retail space where artworks, artists, events,
+            A curated art limited retail platform where works, artists, events,
             and cultural life meet.
           </p>
         </div>
 
         <div>
-          <p className="section-kicker">Channels</p>
+          <p className="section-kicker">Explore</p>
           <div className="mt-4 flex flex-col gap-4 text-[var(--muted)]">
             {primaryNavigation.map((item) => (
               <Link key={item.href} href={item.href} className="grid gap-1.5">
@@ -30,14 +30,14 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="section-kicker">Editorial / Sources</p>
+          <p className="section-kicker">Editorial</p>
           <div className="mt-4 flex flex-col gap-4 text-[var(--muted)]">
             {secondaryNavigation.map((item) => (
               <Link key={item.href} href={item.href} className="text-sm leading-7">
                 {item.labelEn}
               </Link>
             ))}
-            <span className="body-copy">Selected records and contact details appear here as material becomes available.</span>
+            <span className="body-copy">For visits, collaborations, and artwork inquiries, contact NAG directly.</span>
           </div>
         </div>
       </div>

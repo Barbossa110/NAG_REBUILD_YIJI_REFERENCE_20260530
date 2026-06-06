@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { artists } from "@/data/artists";
 import { MediaTile } from "@/components/media-tile";
+import { getEventStageLabel } from "@/lib/event-stage";
 import { publicMetadata, publicOptionalText } from "@/lib/public-display";
 import type { EventItem } from "@/lib/types";
 
@@ -21,6 +22,7 @@ export function EventCard({
   const city = publicMetadata(event.city);
   const summary = publicOptionalText(event.summary);
   const metadata = [dateRange, city].filter(Boolean).join(" / ");
+  const stageLabel = getEventStageLabel(event.status);
 
   return (
     <Link href={`/events/${event.slug}`} className="group block">
@@ -33,12 +35,12 @@ export function EventCard({
       >
         <div className="md:col-span-2 flex items-start justify-between gap-4">
           <span className={`index-mark ${inverse ? "inverse" : ""}`}>{indexLabel}</span>
-          <span className="metadata">{event.status}</span>
+          <span className="metadata">{stageLabel}</span>
         </div>
         <MediaTile
           src={event.images[0]}
           alt={event.title}
-          label="Event media"
+          label="Event image"
           tone={inverse ? "dark" : "light"}
         />
         <div className="space-y-4">
@@ -56,7 +58,7 @@ export function EventCard({
             </p>
           ) : null}
           <p className={inverse ? "body-copy text-[rgba(255,255,255,0.66)]" : "body-copy"}>
-            Related artists: {relatedArtistNames}
+            Artists: {relatedArtistNames}
           </p>
         </div>
       </div>

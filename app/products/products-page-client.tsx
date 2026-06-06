@@ -26,8 +26,8 @@ export function ProductsPageClient() {
   return (
     <PageShell
       eyebrow="Products"
-      title="The product channel behaves like a collection view with quiet pricing."
-      description="Works are presented through a calm index with filtering by artist and medium."
+      title="Works and objects are presented with the pace of a gallery index."
+      description="Browse by artist or medium, with images, names, and material notes kept at the center."
     >
       <FilterBar
         basePath="/products"
@@ -55,7 +55,7 @@ export function ProductsPageClient() {
           },
         ]}
       />
-      <div className="body-copy mb-6">Showing {filteredProducts.length} works in the current product selection.</div>
+      <div className="body-copy mb-6">{filteredProducts.length} works in view.</div>
       <ProductGrid products={filteredProducts} />
     </PageShell>
   );

@@ -5,37 +5,37 @@ export const primaryNavigation: NavigationItem[] = [
     label: "产品",
     labelEn: "Products",
     href: "/products",
-    summary: "Product archive and detail views",
+    summary: "Works and limited objects",
   },
   {
     label: "艺术家",
     labelEn: "Artists",
     href: "/artists",
-    summary: "Artist index and profile pages",
+    summary: "Artists and practices",
   },
   {
     label: "店铺地址",
     labelEn: "Stores",
     href: "/stores",
-    summary: "Space status and visit information",
+    summary: "City anchors and visit notes",
   },
   {
     label: "艺术事件",
     labelEn: "Events",
     href: "/events",
-    summary: "Current, upcoming, and past projects",
+    summary: "Programs, conversations, and gatherings",
   },
   {
     label: "关于",
     labelEn: "About",
     href: "/about",
-    summary: "Editorial brand reading experience",
+    summary: "Position, philosophy, and scope",
   },
   {
     label: "联系我们",
     labelEn: "Contact",
     href: "/contact",
-    summary: "Contact facts only",
+    summary: "Artwork inquiries and visits",
   },
 ];
 
@@ -44,7 +44,7 @@ export const secondaryNavigation: NavigationItem[] = [
     label: "Stories",
     labelEn: "Stories",
     href: "/stories",
-    summary: "Interviews, press, video, and editorial material",
+    summary: "Interviews, moving image, and editorial notes",
   },
 ];
 

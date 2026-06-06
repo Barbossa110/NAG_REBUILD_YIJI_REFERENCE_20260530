@@ -61,8 +61,6 @@ public/sources/artists/孔宇/WechatIMG11.jpg
 public/sources/artists/孔宇/截屏2026-05-26 16.43.54.png
 public/sources/artists/沈天宇/desert racing_1_Sean 沈天宇_来自小红书网页版.jpg
 public/sources/artists/谢臻麟/截屏2026-05-26 16.41.06.png
-public/sources/artists/黄鹿/2026北京当代艺术博览会论坛现场_1_大鹿_来自小红书网页版.jpg
-public/sources/artists/黄鹿/截屏2026-05-26 17.21.14.png
 public/sources/products/Jeremie Thircuir/Lotus & Rose.png
 public/sources/products/Jeremie Thircuir/Rose.png
 public/sources/products/Jeremie Thircuir/南瓜 3 Pumpkin 3.png
@@ -127,8 +125,3 @@ public/sources/products/谢臻麟/呼吸的颜色3.jpg
 public/sources/products/谢臻麟/莫比乌斯环灯1.png
 public/sources/products/谢臻麟/莫比乌斯环灯2.png
 public/sources/products/谢臻麟/莫比乌斯环灯3.jpg
-public/sources/products/黄鹿/《彝衣》.png
-public/sources/products/黄鹿/《檐柱》.png
-public/sources/products/黄鹿/《琅玕》单节.png
-public/sources/products/黄鹿/《琅玕》双节.png
-public/sources/products/黄鹿/《罗锅》.png

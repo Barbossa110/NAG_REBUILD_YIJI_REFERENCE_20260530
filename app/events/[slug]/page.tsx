@@ -8,6 +8,7 @@ import { artists } from "@/data/artists";
 import { events } from "@/data/events";
 import { products } from "@/data/products";
 import { stories } from "@/data/stories";
+import { getEventStageLabel } from "@/lib/event-stage";
 import { getEventBySlug } from "@/lib/filters";
 import { publicMetadata, publicOptionalText } from "@/lib/public-display";
 
@@ -34,6 +35,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
   const relatedStories = stories.filter((story) => story.relatedEvents.includes(event.slug));
   const siblingEvents = events.filter((entry) => entry.slug !== event.slug);
   const summary = publicOptionalText(event.summary);
+  const stageLabel = getEventStageLabel(event.status);
 
   return (
     <main className="fine-rule section-space">
@@ -49,11 +51,11 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
           <MediaTile
             src={event.images[0]}
             alt={event.title}
-            label={`${event.title} key visual`}
+            label={`${event.title} image`}
           />
           <div className="space-y-8 lg:pt-2">
             <div>
-              <p className="metadata">{event.status}</p>
+              <p className="metadata">{stageLabel}</p>
               <h1 className="mt-4 font-display-cn text-[2.3rem] leading-[1.02] md:text-[3.8rem]">
                 {event.title}
               </h1>
@@ -62,7 +64,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               <MetaRow label="Date" value={publicMetadata(event.dateRange) ?? "暂未公布"} />
               <MetaRow label="City" value={publicMetadata(event.city) ?? "暂未公布"} />
               <MetaRow label="Location" value={publicMetadata(event.location) ?? "暂未公布"} />
-              <MetaRow label="Status" value={event.status} />
+              <MetaRow label="Period" value={stageLabel} />
             </dl>
             {summary ? <p className="body-copy">{summary}</p> : null}
           </div>
@@ -83,7 +85,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
             </div>
           </div>
           <div className="quiet-card p-8">
-            <p className="section-kicker">Media Area</p>
+            <p className="section-kicker">Images / Video</p>
             <p className="body-copy mt-6">
               更多现场图片与影像资料将随项目发布节奏更新。
             </p>
@@ -91,7 +93,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
         </div>
 
         <div className="mt-16 border-t border-[var(--line)] pt-10">
-          <p className="section-kicker">Related Products</p>
+          <p className="section-kicker">Related Works</p>
           <div className="mt-8">
             <ProductGrid products={relatedProducts} />
           </div>

@@ -53,7 +53,7 @@ export default async function ProductDetailPage({
           />
           <div className="space-y-8 lg:pt-2">
             <div>
-              <p className="section-kicker">Product Detail</p>
+              <p className="section-kicker">Work</p>
               <h1 className="mt-4 font-display-cn text-[2.3rem] leading-[1.02] md:text-[3.8rem]">
                 {product.displayTitle}
               </h1>
@@ -89,7 +89,7 @@ export default async function ProductDetailPage({
                 href={`/artists/${artist.slug}`}
                 className="inline-flex border-b border-[var(--ink)] pb-1 text-sm"
               >
-                Open artist profile
+                View artist
               </Link>
             ) : null}
           </div>
@@ -98,12 +98,12 @@ export default async function ProductDetailPage({
         <div className="mt-16 grid gap-10 border-t border-[var(--line)] pt-10 md:grid-cols-2">
           <NavBlock
             eyebrow="Previous"
-            title={previous?.displayTitle ?? "No previous product"}
+            title={previous?.displayTitle ?? "No previous work"}
             href={previous ? `/products/${previous.slug}` : undefined}
           />
           <NavBlock
             eyebrow="Next"
-            title={next?.displayTitle ?? "No next product"}
+            title={next?.displayTitle ?? "No next work"}
             href={next ? `/products/${next.slug}` : undefined}
           />
         </div>
@@ -111,7 +111,7 @@ export default async function ProductDetailPage({
         <div className="mt-16 border-t border-[var(--line)] pt-10">
           <div className="mb-8 flex items-end justify-between gap-6">
             <div>
-              <p className="eyebrow">Related Products</p>
+              <p className="eyebrow">Related Works</p>
               <h2 className="mt-3 text-3xl leading-tight tracking-[-0.03em]">
                 More from the same artist
               </h2>

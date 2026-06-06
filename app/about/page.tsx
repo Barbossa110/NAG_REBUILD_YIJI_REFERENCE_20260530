@@ -8,7 +8,7 @@ export default function AboutPage() {
     <PageShell
       eyebrow="About"
       title="About Nearly Anything Goes"
-      description="Brand profile, philosophy, positioning, and business scope."
+      description="A concise introduction to NAG's position, philosophy, and scope."
     >
       <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="border border-[var(--line)] bg-[var(--surface)] p-8 space-y-6">
@@ -57,7 +57,7 @@ export default function AboutPage() {
             </p>
           </section>
           <section className="border-t border-[var(--line)] pt-6">
-            <p className="eyebrow">Business Scope / 业务范围</p>
+            <p className="eyebrow">Platform Scope / 平台方向</p>
             <p className="mt-4 text-sm leading-8 text-[var(--muted)]">
               主营业务：独家｜限定艺术品售卖 × 联名艺术品发布 × 艺术家商业化运营
             </p>

@@ -35,7 +35,6 @@ The requested path in `nag 更新提需.txt` is `/Users/barbossa/Desktop/Narture
 | Jeremie Thircuir | Portrait by Stephen Chow_1_杰瑞米 Jeremie Thircuir_来自小红书网页版.jpg | 杰瑞米艺术家介绍.docx | 产品照片 | confirmed by folder and file names |
 | 沈天宇 | desert racing_1_Sean 沈天宇_来自小红书网页版.jpg | 沈天宇艺术家介绍.docx | 产品照片 | confirmed by folder and file names |
 | 謝鎮璘 | 截屏2026-05-26 16.41.06.png | 謝鎮璘艺术家介绍.docx | 产品 | confirmed by folder and file names; maps to 谢臻麟 / Xie Zhenlin in site data |
-| 黄鹿 | 截屏2026-05-26 17.21.14.png | 黄鹿艺术家介绍.docx | 产品照片 | confirmed by folder and file names |
 
 ## Product Names Identified From File Names
 
@@ -46,7 +45,6 @@ The requested path in `nag 更新提需.txt` is `/Users/barbossa/Desktop/Narture
 - Jeremie Thircuir: Lotus & Rose, Rose, 南瓜 3 Pumpkin 3, 大姜 Giant Ginger, 好柿花生 Good Things happen, 姜 2 Ginger 2, 朝鲜蓟 1 Artichoke 1, 柠檬 Lemons, 水果拼盘 Fruit Platter, 玉米 Corn, 芦笋 1 Asparagus 1, 苦瓜 Bittergourd, 茄子 1 Eggplant 1, 葫芦 1 Hulu 1, 葫芦 2 Hulu 2, 长葫芦 Snake Gourd
 - 沈天宇: Baseball, Belly Man, Belly Man 2, Ceramic Tray, Christmas, Homies, Keep, Punk, Seagull Belly, Sexy ?
 - 謝鎮璘 / 谢臻麟: Breathing Color, Gradient, Spark, Mobius
-- 黄鹿: 《彝衣》, 《檐柱》, 《琅玕》单节, 《琅玕》双节, 《罗锅》
 
 ## Confirmed Uses In Front-End
 

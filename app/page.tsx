@@ -11,17 +11,17 @@ import { products } from "@/data/products";
 import { stories } from "@/data/stories";
 import { withAssetPath } from "@/lib/asset-path";
 
-const curatedProductSlugs = ["panacea-122", "琥珀流", "彝衣", "大姜-giant-ginger", "海晏瑶", "莫比乌斯环灯1"];
+const curatedProductSlugs = ["panacea-122", "琥珀流", "大姜-giant-ginger", "海晏瑶", "莫比乌斯环灯1"];
 const featuredProducts = curatedProductSlugs
   .map((slug) => products.find((product) => product.slug === slug))
   .filter((product): product is NonNullable<typeof product> => Boolean(product));
-const curatedArtistSlugs = ["liu-zhenchen", "kong-yu", "huang-lu", "jeremie-thircuir", "xie-zhenlin", "dabeiyuzhou"];
+const curatedArtistSlugs = ["liu-zhenchen", "kong-yu", "jeremie-thircuir", "xie-zhenlin", "dabeiyuzhou"];
 const featuredArtists = curatedArtistSlugs
   .map((slug) => artists.find((artist) => artist.slug === slug))
   .filter((artist): artist is NonNullable<typeof artist> => Boolean(artist));
 const featuredEvents = events.filter((event) => event.status !== "past").slice(0, 2);
 const featuredStories = stories.slice(0, 4);
-const confirmedStoreCities = ["成都", "武汉", "深圳"];
+const storeCities = ["成都", "武汉", "深圳"];
 const heroImage = "/sources/branding/space-image.jpg";
 
 export default function Home() {
@@ -72,9 +72,9 @@ export default function Home() {
         <div className="editorial-shell">
           <SectionHeading
             eyebrow="Featured Products"
-            title="Product archive shaped like a gallery index, not a storefront."
-            description="Pricing remains present but restrained. Metadata stays quiet and factual rather than commercial."
-            action={{ href: "/products", label: "View all products" }}
+            title="Works and limited objects are arranged for slow looking."
+            description="Images, artist names, materials, and inquiry stay quiet, with the work kept at the center."
+            action={{ href: "/products", label: "View products" }}
           />
           <ProductGrid products={featuredProducts} />
         </div>
@@ -84,8 +84,8 @@ export default function Home() {
         <div className="editorial-shell">
           <SectionHeading
             eyebrow="Featured Artists"
-            title="Artists are treated as living chapters inside a cultural archive."
-            description="Artist pages bring together biography, works, and related events without flattening them into a commercial directory."
+            title="Artists appear as individual chapters within the NAG platform."
+            description="Each profile gathers practice, works, and related encounters with room for individual voice."
             action={{ href: "/artists", label: "Browse artists" }}
           />
           <ArtistList artists={featuredArtists} />
@@ -95,10 +95,10 @@ export default function Home() {
       <section className="section-space bg-[var(--inverse)] text-[var(--surface)]">
         <div className="editorial-shell">
           <SectionHeading
-            eyebrow="Current / Upcoming Events"
-            title="Event pages behave like project dossiers with media space built in."
-            description="Events are presented as project files with room for image, video, and related works."
-            action={{ href: "/events", label: "Open events channel", inverse: true }}
+            eyebrow="Events / Program"
+            title="Public programs, conversations, and gatherings form the living side of NAG."
+            description="Events connect artists, works, images, and audiences through a calm editorial sequence."
+            action={{ href: "/events", label: "View events", inverse: true }}
             inverse
           />
           <EventList events={featuredEvents} inverse />
@@ -109,13 +109,13 @@ export default function Home() {
         <div className="editorial-shell grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <SectionHeading
             eyebrow="Store / Visit"
-            title="Space information stays factual, even when the facts are still incomplete."
-            description="No speculative address, map, or visit logistics are shown before confirmation."
-            action={{ href: "/stores", label: "Store status" }}
+            title="Visit information will be announced city by city."
+            description="Only city anchors are shown for now; address and opening details remain intentionally quiet until ready."
+            action={{ href: "/stores", label: "Visit notes" }}
           />
           <div className="grid gap-6 md:grid-cols-2">
             <div className="quiet-card p-6">
-              <p className="section-kicker">Current Status</p>
+              <p className="section-kicker">Opening Rhythm</p>
               <p className="mt-4 text-[1.2rem] leading-tight">暂未公布</p>
               <p className="body-copy mt-4">
                 成都 / 武汉 / 深圳
@@ -124,9 +124,9 @@ export default function Home() {
               </p>
             </div>
             <div className="quiet-card p-6">
-              <p className="section-kicker">Visit Notes</p>
+              <p className="section-kicker">City Anchors</p>
               <p className="body-copy mt-4">
-                {confirmedStoreCities.join(" / ")}
+                {storeCities.join(" / ")}
                 <br />
                 其余信息：暂未公布
               </p>
@@ -139,8 +139,8 @@ export default function Home() {
         <div className="editorial-shell">
           <SectionHeading
             eyebrow="Stories / Editorial"
-            title="Stories exists as a dedicated editorial layer for interviews, press material, and moving image."
-            description="Stories holds interviews, press material, moving image, and future editorial writing."
+            title="Stories follows the conversations, images, and notes around NAG."
+            description="Interviews, moving image, press notes, and editorial fragments sit beside the works they orbit."
             action={{ href: "/stories", label: "Open stories" }}
           />
           <StoryList stories={featuredStories} />
@@ -152,8 +152,8 @@ export default function Home() {
           <div>
             <SectionHeading
               eyebrow="About NAG"
-              title="An editorial reading experience, not a generic gallery paragraph stack."
-              description="Brand profile, philosophy, and positioning are arranged as a reading sequence rather than a corporate summary."
+              title="A concise reading of the platform's position, tone, and spatial imagination."
+              description="The introduction keeps NAG clear and direct without turning the page into corporate copy."
               action={{ href: "/about", label: "Read about NAG" }}
             />
           </div>
@@ -180,14 +180,14 @@ export default function Home() {
           <div>
             <p className="section-kicker">Contact</p>
             <h2 className="section-title mt-4 max-w-3xl text-[2rem] md:text-[3.15rem]">
-              Contact remains concise and factual.
+              For visits, collaborations, and artwork inquiries.
             </h2>
           </div>
           <Link
             href="/contact"
             className="inline-flex h-11 items-center border border-[var(--ink)] px-6 text-sm transition-colors hover:bg-[var(--ink)] hover:text-[var(--surface)]"
           >
-            Contact page
+            Contact us
           </Link>
         </div>
       </section>

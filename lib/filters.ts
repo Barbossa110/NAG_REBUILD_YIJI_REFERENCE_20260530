@@ -2,12 +2,11 @@ import { artists } from "@/data/artists";
 import { events } from "@/data/events";
 import { products } from "@/data/products";
 import { stories } from "@/data/stories";
-import type { Artist, EventItem, Product } from "@/lib/types";
+import type { Artist, EventItem, EventStatus, Product } from "@/lib/types";
 
 const curatedProductSlugs = [
   "panacea-122",
   "琥珀流",
-  "彝衣",
   "大姜-giant-ginger",
   "海晏瑶",
   "莫比乌斯环灯1",
@@ -16,7 +15,6 @@ const curatedProductSlugs = [
 const curatedArtistSlugs = [
   "liu-zhenchen",
   "kong-yu",
-  "huang-lu",
   "jeremie-thircuir",
   "xie-zhenlin",
   "dabeiyuzhou",
@@ -172,6 +170,6 @@ export function productFilterOptions(collection: Product[]) {
 
 export function eventFilterOptions(collection: EventItem[]) {
   return {
-    statuses: uniqueValues(collection.map((event) => event.status)),
+    statuses: uniqueValues(collection.map((event) => event.status)) as EventStatus[],
   };
 }

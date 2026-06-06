@@ -5,8 +5,8 @@ export default function StoresPage() {
   return (
     <PageShell
       eyebrow="Stores"
-      title="Store information stays factual and restrained."
-      description="Current city references and publication status."
+      title="City anchors for future NAG spaces."
+      description="Opening addresses and visit hours will be published only after they are ready."
     >
       <div className="grid gap-8 md:grid-cols-3">
         {stores.map((store) => (
@@ -22,14 +22,11 @@ export default function StoresPage() {
               暂未公布
             </p>
             <p className="mt-6 text-sm leading-7 text-[var(--muted)]">
-              {store.notes}
-            </p>
-            <p className="mt-6 text-sm leading-7 text-[var(--muted)]">
-              Map: 暂未公布
+              Address / 地址：暂未公布
               <br />
-              Opening hours: 暂未公布
+              Hours / 开放时间：暂未公布
               <br />
-              Accessibility info: 暂未公布
+              Visit access / 到访信息：暂未公布
             </p>
           </article>
         ))}

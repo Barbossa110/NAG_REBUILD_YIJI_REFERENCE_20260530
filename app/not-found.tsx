@@ -9,7 +9,7 @@ export default function NotFound() {
           This page is not in the archive.
         </h1>
         <p className="mt-6 text-base leading-8 text-[var(--muted)]">
-          The route you requested does not exist in the current NAG rebuild.
+          The page may have moved, or it may not be public yet.
         </p>
         <Link
           href="/"

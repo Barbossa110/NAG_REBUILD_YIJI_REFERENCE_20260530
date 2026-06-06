@@ -160,28 +160,4 @@ export const artists: Artist[] = [
     sourceStatus: "confirmed",
     reviewStatus: "needs review",
   },
-  {
-    slug: "huang-lu",
-    nameZh: "黄鹿",
-    nameEn: "Huang Lu",
-    bioZh:
-      "1992年出生于四川德阳什邡，青年装置艺术家、当代装置设计师，成都一南文化传播有限公司创始人。她以植物为主要创作媒介，将自然生命与空间艺术深度融合。",
-    bioEn:
-      "Born in 1992 in Shifang, Deyang, Huang Lu is a young installation artist and contemporary installation designer whose work fuses plant life, sculptural form, and spatial art with a minimalist sensibility.",
-    portrait:
-      "/sources/artists/%E9%BB%84%E9%B9%BF/%E6%88%AA%E5%B1%8F2026-05-26%2017.21.14.png",
-    gallery: [
-      "/sources/products/%E9%BB%84%E9%B9%BF/%E3%80%8A%E5%BD%9D%E8%A1%A3%E3%80%8B.png",
-      "/sources/products/%E9%BB%84%E9%B9%BF/%E3%80%8A%E6%AA%90%E6%9F%B1%E3%80%8B.png",
-      "/sources/products/%E9%BB%84%E9%B9%BF/%E3%80%8A%E7%90%85%E7%8E%95%E3%80%8B%E5%8D%95%E8%8A%82.png",
-    ],
-    mediums: [
-      "Installation",
-      "Spatial design / needs confirmation",
-      "Lighting object / needs confirmation",
-    ],
-    city: "Chengdu / needs confirmation",
-    sourceStatus: "confirmed",
-    reviewStatus: "needs review",
-  },
 ];

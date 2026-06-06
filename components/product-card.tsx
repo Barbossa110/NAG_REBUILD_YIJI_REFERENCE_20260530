@@ -20,7 +20,7 @@ export function ProductCard({
       <Link href={`/products/${product.slug}`} className="group block space-y-5">
         <div className="flex items-start justify-between gap-4">
           <span className="index-mark">{indexLabel}</span>
-          <span className="tag-label text-[var(--muted)]">Archive item</span>
+          <span className="tag-label text-[var(--muted)]">Work</span>
         </div>
         <div className="relative">
           <MediaTile

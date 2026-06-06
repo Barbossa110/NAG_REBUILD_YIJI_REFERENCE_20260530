@@ -44,8 +44,8 @@ export default async function ArtistDetailPage({
           <MediaTile
             src={artist.portrait}
             alt={artist.nameZh}
-            label="Artist portrait"
-            caption="Portrait / artwork image"
+            label="Portrait / Work"
+            caption="Artist portrait or artwork image"
           />
           <div className="space-y-8 lg:pt-2">
             <div>
@@ -93,9 +93,9 @@ export default async function ArtistDetailPage({
         </div>
 
         <div className="mt-16 border-t border-[var(--line)] pt-10">
-          <p className="section-kicker">Products</p>
+          <p className="section-kicker">Works</p>
           <h2 className="mt-3 font-display-en text-[1.9rem] leading-[1.05] tracking-[-0.03em] md:text-[2.5rem]">
-            All products linked to this artist
+            Works by this artist
           </h2>
           <div className="mt-8">
             <ProductGrid products={artistProducts} />
@@ -105,7 +105,7 @@ export default async function ArtistDetailPage({
         <div className="mt-16 border-t border-[var(--line)] pt-10">
           <p className="section-kicker">Related Events</p>
           <h2 className="mt-3 font-display-en text-[1.9rem] leading-[1.05] tracking-[-0.03em] md:text-[2.5rem]">
-            Project and event structure
+            Programs and conversations
           </h2>
           <div className="mt-8">
             <EventList events={relatedEvents} />
@@ -113,7 +113,7 @@ export default async function ArtistDetailPage({
         </div>
 
         <div className="mt-16 border-t border-[var(--line)] pt-10">
-          <p className="section-kicker">Artist Index</p>
+          <p className="section-kicker">Artists</p>
           <div className="mt-6">
             <ArtistList artists={artists} />
           </div>

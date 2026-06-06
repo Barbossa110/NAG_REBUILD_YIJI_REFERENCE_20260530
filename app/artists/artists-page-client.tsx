@@ -26,14 +26,14 @@ export function ArtistsPageClient() {
   return (
     <PageShell
       eyebrow="Artists"
-      title="A textual index with image reservations keeps the artist channel closer to an institution directory."
-      description="Filtering is present, but the presentation avoids turning artists into a brand grid."
+      title="Artists are introduced as distinct voices within the NAG platform."
+      description="Names, portraits, cities, and practices are arranged with restraint so each profile can unfold."
     >
       <div className="quiet-card mb-6 grid gap-4 p-5 md:grid-cols-[0.7fr_1.3fr]">
         <div>
-          <p className="section-kicker">Artist Index</p>
+          <p className="section-kicker">Artists In View</p>
           <p className="body-copy mt-3">
-            Showing {filteredArtists.length} artist profiles in the current selection.
+            {filteredArtists.length} artists in view.
           </p>
         </div>
         <div className="grid gap-2 md:grid-cols-3">

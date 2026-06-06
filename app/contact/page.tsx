@@ -7,19 +7,19 @@ export default function ContactPage() {
     <PageShell
       eyebrow="Contact"
       title="Contact"
-      description="Current contact details and QR access."
+      description="For artwork inquiries, visits, collaborations, and direct contact."
     >
       <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
         <div className="border border-[var(--line)] bg-[var(--surface)] p-8">
-          <p className="eyebrow">General Contact</p>
+          <p className="eyebrow">Contact Pathways</p>
           <div className="mt-6 space-y-4 text-sm leading-7 text-[var(--muted)]">
             <p>Email: narture@vip.163.com</p>
             <p>Official mailbox: nearlyanythinggoesofficial@gmail.com</p>
-            <p>WeChat contact available via QR code.</p>
+            <p>Scan the QR code for WeChat contact.</p>
           </div>
         </div>
         <div className="border border-[var(--line)] bg-[var(--surface)] p-8">
-          <p className="eyebrow">WeChat QR</p>
+          <p className="eyebrow">WeChat</p>
           <div className="mt-6 space-y-4">
             <Image
               src={withAssetPath("/sources/branding/contact-qr.jpg") ?? "/sources/branding/contact-qr.jpg"}

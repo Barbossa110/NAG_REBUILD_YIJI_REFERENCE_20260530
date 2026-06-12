@@ -16,7 +16,7 @@ export function ProductCard({
   const medium = publicMetadata(product.medium);
 
   return (
-    <div className="quiet-card space-y-5 p-5 md:p-6">
+    <article className="group border-t border-[var(--line)] pt-5 transition-colors duration-300 ease-[var(--motion)] hover:border-[var(--line-strong)]">
       <Link href={`/products/${product.slug}`} className="group block space-y-5">
         <div className="flex items-start justify-between gap-4">
           <span className="index-mark">{indexLabel}</span>
@@ -32,7 +32,7 @@ export function ProductCard({
         </div>
         <div className="grid gap-4">
           <div>
-            <h3 className="font-display-cn text-[1.7rem] leading-[1.08] md:text-[1.95rem]">
+            <h3 className="font-display-cn text-[1.38rem] leading-[1.1] transition-colors duration-300 ease-[var(--motion)] group-hover:text-[var(--accent)] md:text-[1.62rem]">
               {product.displayTitle}
             </h3>
             <p className="body-copy mt-3">{artist ? `${artist.nameZh} / ${artist.nameEn}` : "Artist"}</p>
@@ -47,6 +47,6 @@ export function ProductCard({
           联系询价
         </Link>
       </div>
-    </div>
+    </article>
   );
 }

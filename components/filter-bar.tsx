@@ -21,7 +21,7 @@ export function FilterBar({ basePath, sections, current }: FilterBarProps) {
           <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
             <Link
               href={buildHref(basePath, current, section.param, undefined)}
-              className={`filter-link ${
+              className={`archive-link filter-link ${
                 !current[section.param]
                   ? "active"
                   : ""
@@ -35,7 +35,7 @@ export function FilterBar({ basePath, sections, current }: FilterBarProps) {
                 <Link
                   key={option.value}
                   href={buildHref(basePath, current, section.param, option.value)}
-                  className={`filter-link ${active ? "active" : ""}`}
+                  className={`archive-link filter-link ${active ? "active" : ""}`}
                 >
                   {option.label}
                 </Link>

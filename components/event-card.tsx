@@ -27,10 +27,10 @@ export function EventCard({
   return (
     <Link href={`/events/${event.slug}`} className="group block">
       <div
-        className={`grid gap-7 border p-5 md:grid-cols-[0.88fr_1.12fr] md:p-7 ${
+        className={`grid gap-6 border-t py-7 transition-colors duration-300 ease-[var(--motion)] md:grid-cols-[0.72fr_1.28fr] md:py-9 ${
           inverse
             ? "border-[rgba(255,255,255,0.18)]"
-            : "border-[var(--line)] bg-[var(--surface)]"
+            : "border-[var(--line)] group-hover:border-[var(--line-strong)]"
         }`}
       >
         <div className="md:col-span-2 flex items-start justify-between gap-4">
@@ -44,7 +44,7 @@ export function EventCard({
           tone={inverse ? "dark" : "light"}
         />
         <div className="space-y-4">
-          <h3 className="font-display-cn text-[1.95rem] leading-[1.06] md:text-[2.7rem]">
+          <h3 className="font-display-cn text-[1.75rem] leading-[1.08] transition-colors duration-300 ease-[var(--motion)] group-hover:text-[var(--accent)] md:text-[2.35rem]">
             {event.title}
           </h3>
           {summary ? (

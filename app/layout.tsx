@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className="min-h-full bg-[var(--bg)] text-[var(--ink)]">
         <div className="min-h-full">
           <SiteHeader />
-          <div className="pt-20 md:pt-24">{children}</div>
+          {children}
           <SiteFooter />
         </div>
       </body>

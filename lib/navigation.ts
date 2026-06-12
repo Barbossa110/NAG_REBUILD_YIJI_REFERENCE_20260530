@@ -39,14 +39,7 @@ export const primaryNavigation: NavigationItem[] = [
   },
 ];
 
-export const secondaryNavigation: NavigationItem[] = [
-  {
-    label: "Stories",
-    labelEn: "Stories",
-    href: "/stories",
-    summary: "Interviews, moving image, and editorial notes",
-  },
-];
+export const secondaryNavigation: NavigationItem[] = [];
 
 export function isActivePath(pathname: string, href: string) {
   if (href === "/") return pathname === "/";

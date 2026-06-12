@@ -27,11 +27,11 @@ export function MediaTile({
   const resolvedSrc = withAssetPath(src) ?? src;
 
   return (
-    <div
-      className={`overflow-hidden border ${
+    <figure
+      className={`overflow-hidden border transition-colors duration-300 ease-[var(--motion)] ${
         dark
           ? "border-[rgba(255,255,255,0.18)] bg-[rgba(255,255,255,0.04)]"
-          : "border-[var(--line)] bg-[var(--bg-alt)]"
+          : "border-[var(--line)] bg-[var(--bg-alt)] group-hover:border-[var(--line-strong)]"
       } ${className}`}
     >
       <div className="relative aspect-[4/5]">
@@ -39,26 +39,28 @@ export function MediaTile({
           src={resolvedSrc}
           alt={alt}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-700 ease-[var(--motion)] group-hover:scale-[1.016]"
           sizes="(min-width: 1200px) 30vw, (min-width: 768px) 45vw, 100vw"
         />
       </div>
-      <div className="space-y-2 p-5">
-        {label ? (
-          <p className={`tag-label ${dark ? "text-[rgba(255,255,255,0.62)]" : "text-[var(--muted)]"}`}>
-            {label}
-          </p>
-        ) : null}
-        {caption ? (
-          <p
-            className={`body-copy ${
-              dark ? "text-[rgba(255,255,255,0.72)]" : "text-[var(--muted)]"
-            }`}
-          >
-            {caption}
-          </p>
-        ) : null}
-      </div>
-    </div>
+      {label || caption ? (
+        <figcaption className="space-y-2 border-t border-[var(--line)] p-4 md:p-5">
+          {label ? (
+            <p className={`tag-label ${dark ? "text-[rgba(255,255,255,0.62)]" : "text-[var(--muted)]"}`}>
+              {label}
+            </p>
+          ) : null}
+          {caption ? (
+            <p
+              className={`body-copy ${
+                dark ? "text-[rgba(255,255,255,0.72)]" : "text-[var(--muted)]"
+              }`}
+            >
+              {caption}
+            </p>
+          ) : null}
+        </figcaption>
+      ) : null}
+    </figure>
   );
 }

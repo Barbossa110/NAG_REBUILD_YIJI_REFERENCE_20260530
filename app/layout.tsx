@@ -4,9 +4,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Nearly Anything Goes / NAG",
+  title: "Nearly Anything Goes",
   description:
-    "Nearly Anything Goes / NAG — curated art, artists, events, and editorial archive.",
+    "Nearly Anything Goes — curated art, artists, events, and editorial archive.",
 };
 
 export default function RootLayout({

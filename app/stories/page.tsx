@@ -11,7 +11,7 @@ export default function StoriesPage() {
   return (
     <PageShell
       eyebrow="Stories"
-      title="Stories gathers the voices, notes, and moving images around NAG."
+      title="Stories gathers the voices, notes, and moving images around Nearly Anything Goes."
       description="A quieter editorial room for interviews, field notes, press fragments, and future moving-image material."
     >
       <div className="quiet-card mb-6 grid gap-4 p-5 md:grid-cols-[0.8fr_1.2fr]">

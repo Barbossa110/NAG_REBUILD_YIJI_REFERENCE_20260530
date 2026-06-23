@@ -19,7 +19,7 @@ export function EventsPageClient() {
   return (
     <PageShell
       eyebrow="Events"
-      title="Programs, conversations, and gatherings around the NAG platform."
+      title="Programs, conversations, and gatherings around the Nearly Anything Goes platform."
       description="Events are kept as a public rhythm of encounters between artists, works, space, and audience."
     >
       <FilterBar

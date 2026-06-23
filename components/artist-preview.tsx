@@ -7,7 +7,7 @@ export function ArtistPreview({ artist }: { artist: Artist }) {
   const mediums = publicMetadataList(artist.mediums);
 
   return (
-    <article className="group grid gap-8 border-t border-[var(--line)] py-8 transition-colors duration-300 ease-[var(--motion)] hover:border-[var(--line-strong)] md:grid-cols-[0.68fr_1.32fr] md:items-start md:py-10">
+    <article className="group grid gap-8 border-t border-[var(--line)] py-8 transition-colors duration-300 ease-[var(--motion)] hover:border-[var(--accent-line)] md:grid-cols-[0.68fr_1.32fr] md:items-start md:py-10">
       <div className="space-y-4">
         <span className="index-mark">AR</span>
         <p className="metadata normal-case tracking-[0.03em]">{artist.nameEn}</p>

@@ -1,17 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f1ebdf;
-  --bg-alt: #ded4c5;
-  --surface: #fbf8f1;
-  --surface-soft: rgba(251, 248, 241, 0.54);
-  --ink: #0d0d0b;
-  --muted: #696158;
-  --muted-soft: #8b8278;
-  --line: rgba(13, 13, 11, 0.13);
-  --line-strong: rgba(13, 13, 11, 0.34);
-  --accent: #8b2016;
-  --inverse: #150806;
+  --brand-red: #d53021;
+  --brand-red-deep: #7a100a;
+  --brand-red-shadow: #b02618;
+  --bg: var(--brand-red);
+  --bg-alt: #c22b1d;
+  --surface: #fff6ea;
+  --surface-soft: rgba(255, 246, 234, 0.12);
+  --ink: #fff6ea;
+  --muted: rgba(255, 246, 234, 0.74);
+  --muted-soft: rgba(255, 246, 234, 0.52);
+  --line: rgba(255, 246, 234, 0.22);
+  --line-strong: rgba(255, 246, 234, 0.52);
+  --accent: var(--brand-red);
+  --accent-strong: var(--surface);
+  --accent-soft: rgba(255, 246, 234, 0.12);
+  --accent-line: rgba(255, 246, 234, 0.58);
+  --inverse: #570a06;
   --motion: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
@@ -49,11 +55,11 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(17, 17, 17, 0.019) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 17, 17, 0.019) 1px, transparent 1px);
+    linear-gradient(rgba(255, 246, 234, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 246, 234, 0.045) 1px, transparent 1px);
   background-size: 72px 72px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), transparent 48%);
-  opacity: 0.38;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.62), transparent 54%);
+  opacity: 0.46;
 }
 
 body::after {
@@ -63,9 +69,10 @@ body::after {
   pointer-events: none;
   z-index: 1;
   background-image:
-    radial-gradient(circle at 12% 18%, rgba(139, 32, 22, 0.035), transparent 26%),
-    radial-gradient(circle at 86% 12%, rgba(13, 13, 11, 0.026), transparent 28%);
-  opacity: 0.72;
+    linear-gradient(120deg, rgba(255, 246, 234, 0.045), transparent 38%),
+    linear-gradient(270deg, rgba(87, 10, 6, 0.08), transparent 52%),
+    linear-gradient(to bottom, transparent, rgba(87, 10, 6, 0.04));
+  opacity: 0.42;
 }
 
 a {
@@ -90,8 +97,8 @@ img {
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--surface);
+  background: var(--surface);
+  color: var(--accent);
 }
 
 .font-display-en {
@@ -173,6 +180,7 @@ img {
   font-size: 0.92rem;
   line-height: 1.88;
   color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 .metadata {
@@ -215,7 +223,7 @@ img {
   font-size: clamp(1.5rem, 1.8vw, 2.3rem);
   line-height: 0.9;
   letter-spacing: 0;
-  color: rgba(13, 13, 11, 0.16);
+  color: rgba(255, 246, 234, 0.28);
 }
 
 .index-mark.inverse {
@@ -223,7 +231,7 @@ img {
 }
 
 .editorial-card {
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 246, 234, 0.08);
   border: 1px solid var(--line);
 }
 
@@ -234,35 +242,35 @@ img {
 
 .quiet-card {
   border: 1px solid var(--line);
-  background: rgba(251, 248, 240, 0.46);
+  background: rgba(255, 246, 234, 0.07);
   transition:
-    border-color 180ms ease,
-    background 180ms ease,
-    transform 220ms var(--motion);
+    border-color 220ms var(--motion),
+    background 220ms var(--motion),
+    transform 260ms var(--motion);
 }
 
 .quiet-card:hover {
-  border-color: var(--line-strong);
-  background: rgba(251, 248, 240, 0.72);
+  border-color: var(--accent-line);
+  background: linear-gradient(135deg, rgba(255, 246, 234, 0.13), rgba(122, 16, 10, 0.18));
 }
 
 .archive-panel {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: rgba(251, 248, 241, 0.2);
+  background: rgba(122, 16, 10, 0.13);
 }
 
 .archive-link {
   transition:
-    color 180ms ease,
-    border-color 180ms ease,
-    opacity 180ms ease,
+    color 220ms var(--motion),
+    border-color 220ms var(--motion),
+    opacity 220ms var(--motion),
     transform 220ms var(--motion);
 }
 
 .archive-link:hover {
-  border-color: var(--line-strong);
-  color: var(--ink);
+  border-color: var(--accent-line);
+  color: var(--accent-strong);
 }
 
 .filter-panel {
@@ -281,30 +289,30 @@ img {
   line-height: 1.55;
   color: var(--muted);
   transition:
-    color 180ms ease,
-    border-color 180ms ease;
+    color 220ms var(--motion),
+    border-color 220ms var(--motion);
 }
 
 .filter-link:hover {
-  color: var(--ink);
+  color: var(--accent-strong);
 }
 
 .filter-link.active {
-  border-color: var(--accent);
-  color: var(--ink);
+  border-color: var(--surface);
+  color: var(--accent-strong);
 }
 
 .story-index-card {
   border-top: 1px solid var(--line);
   padding-top: 1.4rem;
   transition:
-    border-color 180ms ease,
-    opacity 180ms ease;
+    border-color 220ms var(--motion),
+    opacity 220ms var(--motion);
 }
 
 .story-index-card:hover {
-  border-color: var(--line-strong);
-  opacity: 0.84;
+  border-color: var(--accent-line);
+  opacity: 0.9;
 }
 
 @media (max-width: 767px) {

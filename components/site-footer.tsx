@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { BrandLogo } from "@/components/brand-logo";
 import { primaryNavigation } from "@/lib/navigation";
 
 export function SiteFooter() {
@@ -13,9 +14,7 @@ export function SiteFooter() {
     <footer className="fine-rule mt-20">
       <div className="editorial-shell py-12 md:py-14">
         <div className="grid gap-8 border-b border-[var(--line)] pb-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <p className="font-display-en text-[1.5rem] leading-none md:text-[1.85rem]">
-            Nearly Anything Goes
-          </p>
+          <BrandLogo className="max-w-[15rem]" sizes="15rem" />
           <p className="body-copy max-w-3xl lg:justify-self-end">
             A curated art limited retail platform where works, artists, events, and cultural life meet.
           </p>
@@ -34,7 +33,7 @@ export function SiteFooter() {
                   <span className="block text-[1rem] font-medium leading-none text-[var(--ink)]">
                     {item.label}
                   </span>
-                  <span className="metadata mt-1.5 block normal-case tracking-[0.04em] transition-colors group-hover:text-[var(--ink)]">
+                  <span className="metadata mt-1.5 block normal-case tracking-[0.04em] transition-colors group-hover:text-[var(--accent-strong)]">
                     {item.labelEn}
                   </span>
                 </Link>
@@ -43,8 +42,8 @@ export function SiteFooter() {
           </nav>
           <div className="border-t border-[var(--line)] pt-5 lg:border-t-0 lg:pt-0">
             <p className="section-kicker">Contact</p>
-            <Link href="/contact" className="archive-link body-copy mt-4 block max-w-sm border-b border-transparent pb-1 hover:text-[var(--ink)]">
-              For visits, collaborations, and artwork inquiries, contact NAG directly.
+            <Link href="/contact" className="archive-link body-copy mt-4 block max-w-sm border-b border-transparent pb-1 hover:text-[var(--accent-strong)]">
+              For visits, collaborations, and artwork inquiries, contact Nearly Anything Goes directly.
             </Link>
           </div>
         </div>

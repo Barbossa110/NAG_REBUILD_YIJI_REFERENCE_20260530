@@ -30,7 +30,7 @@ export function EventCard({
         className={`grid gap-6 border-t py-7 transition-colors duration-300 ease-[var(--motion)] md:grid-cols-[0.72fr_1.28fr] md:py-9 ${
           inverse
             ? "border-[rgba(255,255,255,0.18)]"
-            : "border-[var(--line)] group-hover:border-[var(--line-strong)]"
+            : "border-[var(--line)] group-hover:border-[var(--accent-line)]"
         }`}
       >
         <div className="md:col-span-2 flex items-start justify-between gap-4">

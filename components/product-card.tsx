@@ -6,44 +6,48 @@ import type { Product } from "@/lib/types";
 
 export function ProductCard({
   product,
-  index,
 }: {
   product: Product;
-  index: number;
 }) {
   const artist = artists.find((entry) => entry.slug === product.artistSlug);
-  const indexLabel = String(index).padStart(2, "0");
   const medium = publicMetadata(product.medium);
+  const year = publicMetadata(product.year);
+  const metadata = [medium, year].filter(Boolean).join(" / ");
+  const artistLabel = artist ? `${artist.nameZh} / ${artist.nameEn}` : null;
 
   return (
-    <article className="group border-t border-[var(--line)] pt-5 transition-colors duration-300 ease-[var(--motion)] hover:border-[var(--line-strong)]">
-      <Link href={`/products/${product.slug}`} className="group block space-y-5">
-        <div className="flex items-start justify-between gap-4">
-          <span className="index-mark">{indexLabel}</span>
-          <span className="tag-label text-[var(--muted)]">Work</span>
-        </div>
-        <div className="relative">
+    <article className="group grid h-full grid-rows-[auto_1fr] border-t border-[var(--line)] pt-4 transition-colors duration-300 ease-[var(--motion)] hover:border-[var(--accent-line)] md:pt-5">
+      <Link href={`/products/${product.slug}`} className="grid content-start gap-4">
+        <div className="relative overflow-hidden">
           <MediaTile
             src={product.images[0]}
             alt={product.displayTitle}
             label=""
             caption=""
+            fit="contain"
           />
         </div>
-        <div className="grid gap-4">
-          <div>
-            <h3 className="font-display-cn text-[1.38rem] leading-[1.1] transition-colors duration-300 ease-[var(--motion)] group-hover:text-[var(--accent)] md:text-[1.62rem]">
-              {product.displayTitle}
-            </h3>
-            <p className="body-copy mt-3">{artist ? `${artist.nameZh} / ${artist.nameEn}` : "Artist"}</p>
-          </div>
+        <div className="grid gap-2.5 pt-4 md:pt-5">
+          <h3 className="font-display-cn text-[1.18rem] leading-[1.18] text-[var(--surface)] transition-colors duration-300 ease-[var(--motion)] group-hover:text-[var(--surface)] md:text-[1.34rem]">
+            {product.displayTitle}
+          </h3>
+          {artistLabel ? (
+            <p className="text-[0.88rem] leading-[1.58] text-[var(--muted)]">
+              {artistLabel}
+            </p>
+          ) : null}
+          {metadata ? (
+            <p className="text-[0.72rem] leading-[1.5] tracking-[0.035em] text-[var(--muted-soft)]">
+              {metadata}
+            </p>
+          ) : null}
         </div>
       </Link>
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-[var(--line)] pt-4">
-        {medium ? (
-          <p className="tag-label text-[var(--muted)]">{medium}</p>
-        ) : null}
-        <Link href="/contact" className="tag-label text-[var(--muted)] underline-offset-2 hover:underline">
+      <div className="pt-4 md:pt-5">
+        <Link
+          href="/contact"
+          className="w-fit border-b border-[rgba(255,246,234,0.34)] pb-0.5 text-[0.78rem] leading-[1.5] tracking-[0.035em] text-[var(--muted)] transition-colors duration-200 ease-[var(--motion)] hover:border-[var(--surface)] hover:text-[var(--surface)]"
+        >
           联系询价
         </Link>
       </div>

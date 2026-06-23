@@ -25,16 +25,23 @@ export function ProductsPageClient() {
 
   return (
     <PageShell
-      eyebrow="Products"
-      title="Works and objects are presented with the pace of a gallery index."
-      description="Browse by artist or medium, with images, names, and material notes kept at the center."
+      eyebrow="产品 / Products"
+      title="产品 / Products"
+      description="按艺术家与媒介浏览作品。Browse works by artist and medium."
     >
+      <div className="mb-5 border-b border-[var(--line)] pb-3 md:mb-6 md:pb-4">
+        <p className="text-[0.72rem] leading-[1.45] tracking-[0.08em] text-[var(--muted)] uppercase">
+          产品 / Products
+        </p>
+      </div>
       <FilterBar
         basePath="/products"
         current={current}
+        variant="index"
+        allLabel="全部 / All"
         sections={[
           {
-            label: "Artist",
+            label: "艺术家 / Artist",
             param: "artist",
             options: options.artists.map((slug) => {
               const artist = artists.find((entry) => entry.slug === slug);
@@ -45,7 +52,7 @@ export function ProductsPageClient() {
             }),
           },
           {
-            label: "Medium",
+            label: "媒介 / Medium",
             param: "medium",
             options: options.mediums
               .map((medium) => ({ label: publicMetadata(medium), value: medium }))
@@ -55,7 +62,6 @@ export function ProductsPageClient() {
           },
         ]}
       />
-      <div className="body-copy mb-6">{filteredProducts.length} works in view.</div>
       <ProductGrid products={filteredProducts} />
     </PageShell>
   );

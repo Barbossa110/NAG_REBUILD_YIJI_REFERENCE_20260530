@@ -25,9 +25,9 @@ export function EventCard({
   const stageLabel = getEventStageLabel(event.status);
 
   return (
-    <Link href={`/events/${event.slug}`} className="group block">
+    <Link href={`/events/${event.slug}`} className="archive-link group block">
       <div
-        className={`grid gap-6 border-t py-7 transition-colors duration-300 ease-[var(--motion)] md:grid-cols-[0.72fr_1.28fr] md:py-9 ${
+        className={`grid gap-6 border-t py-7 transition-colors duration-[var(--motion-ui)] ease-[var(--motion)] md:grid-cols-[0.72fr_1.28fr] md:py-9 ${
           inverse
             ? "border-[rgba(255,255,255,0.18)]"
             : "border-[var(--line)] group-hover:border-[var(--accent-line)]"
@@ -44,7 +44,7 @@ export function EventCard({
           tone={inverse ? "dark" : "light"}
         />
         <div className="space-y-4">
-          <h3 className="font-display-cn text-[1.75rem] leading-[1.08] transition-colors duration-300 ease-[var(--motion)] group-hover:text-[var(--accent)] md:text-[2.35rem]">
+          <h3 className="font-display-cn text-[1.75rem] leading-[1.08] transition-colors duration-[var(--motion-ui)] ease-[var(--motion)] group-hover:text-[var(--accent)] md:text-[2.35rem]">
             {event.title}
           </h3>
           {summary ? (

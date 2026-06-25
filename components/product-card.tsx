@@ -2,6 +2,7 @@ import Link from "next/link";
 import { artists } from "@/data/artists";
 import { MediaTile } from "@/components/media-tile";
 import { publicMetadata } from "@/lib/public-display";
+import { toRouteSegment } from "@/lib/filters";
 import type { Product } from "@/lib/types";
 
 export function ProductCard({
@@ -16,8 +17,8 @@ export function ProductCard({
   const artistLabel = artist ? `${artist.nameZh} / ${artist.nameEn}` : null;
 
   return (
-    <article className="group grid h-full grid-rows-[auto_1fr] border-t border-[var(--line)] pt-4 transition-colors duration-300 ease-[var(--motion)] hover:border-[var(--accent-line)] md:pt-5">
-      <Link href={`/products/${product.slug}`} className="grid content-start gap-4">
+    <article className="group grid h-full grid-rows-[auto_1fr] border-t border-[var(--line)] pt-4 transition-colors duration-[var(--motion-ui)] ease-[var(--motion)] hover:border-[var(--accent-line)] focus-within:border-[var(--accent-line)] md:pt-5">
+      <Link href={`/products/${toRouteSegment(product.slug)}`} className="archive-link grid content-start gap-4">
         <div className="relative overflow-hidden">
           <MediaTile
             src={product.images[0]}
@@ -46,7 +47,7 @@ export function ProductCard({
       <div className="pt-4 md:pt-5">
         <Link
           href="/contact"
-          className="w-fit border-b border-[rgba(255,246,234,0.34)] pb-0.5 text-[0.78rem] leading-[1.5] tracking-[0.035em] text-[var(--muted)] transition-colors duration-200 ease-[var(--motion)] hover:border-[var(--surface)] hover:text-[var(--surface)]"
+          className="archive-link inline-flex min-h-8 w-fit items-center border-b border-[rgba(255,246,234,0.34)] pb-0.5 text-[0.78rem] leading-[1.5] tracking-[0.035em] text-[var(--muted)] hover:border-[var(--surface)] hover:text-[var(--surface)]"
         >
           联系询价
         </Link>

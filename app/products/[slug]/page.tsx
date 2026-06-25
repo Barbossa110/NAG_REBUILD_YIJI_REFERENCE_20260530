@@ -6,7 +6,7 @@ import { MediaTile } from "@/components/media-tile";
 import { ProductGrid } from "@/components/product-grid";
 import { artists } from "@/data/artists";
 import { products } from "@/data/products";
-import { getPrevNextProducts, getProductBySlug, getRelatedProducts } from "@/lib/filters";
+import { getPrevNextProducts, getProductBySlug, getRelatedProducts, toRouteSegment } from "@/lib/filters";
 import { publicMetadata, publicOptionalText, publicText } from "@/lib/public-display";
 
 type ProductDetailPageProps = {
@@ -14,7 +14,9 @@ type ProductDetailPageProps = {
 };
 
 export function generateStaticParams() {
-  return products.map((product) => ({ slug: product.slug }));
+  return products
+    .filter((product) => typeof product.slug === "string" && product.slug.trim().length > 0)
+    .map((product) => ({ slug: toRouteSegment(product.slug) }));
 }
 
 export default async function ProductDetailPage({
@@ -22,7 +24,7 @@ export default async function ProductDetailPage({
 }: ProductDetailPageProps) {
   const { slug } = await params;
   const decodedSlug = decodeURIComponent(slug);
-  const product = getProductBySlug(decodedSlug);
+  const product = getProductBySlug(decodedSlug) ?? getProductBySlug(slug);
 
   if (!product) {
     notFound();
@@ -99,12 +101,12 @@ export default async function ProductDetailPage({
           <NavBlock
             eyebrow="Previous"
             title={previous?.displayTitle ?? "No previous work"}
-            href={previous ? `/products/${previous.slug}` : undefined}
+            href={previous ? `/products/${toRouteSegment(previous.slug)}` : undefined}
           />
           <NavBlock
             eyebrow="Next"
             title={next?.displayTitle ?? "No next work"}
-            href={next ? `/products/${next.slug}` : undefined}
+            href={next ? `/products/${toRouteSegment(next.slug)}` : undefined}
           />
         </div>
 

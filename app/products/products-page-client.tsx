@@ -29,11 +29,6 @@ export function ProductsPageClient() {
       title="产品 / Products"
       description="按艺术家与媒介浏览作品。Browse works by artist and medium."
     >
-      <div className="mb-5 border-b border-[var(--line)] pb-3 md:mb-6 md:pb-4">
-        <p className="text-[0.72rem] leading-[1.45] tracking-[0.08em] text-[var(--muted)] uppercase">
-          产品 / Products
-        </p>
-      </div>
       <FilterBar
         basePath="/products"
         current={current}

@@ -15,9 +15,9 @@ export function MobileNav() {
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
-        className={`inline-flex h-10 min-w-14 items-center justify-center border px-3 text-sm transition-all duration-300 ease-[var(--motion)] active:scale-[0.98] ${
+        className={`inline-flex h-11 min-w-16 items-center justify-center border px-3 text-sm transition-all duration-[var(--motion-ui)] ease-[var(--motion)] active:scale-[0.98] ${
           isHome
-            ? "border-[var(--line-strong)] bg-[rgba(122,16,10,0.18)] text-[var(--surface)] hover:bg-[rgba(122,16,10,0.28)]"
+            ? "border-[var(--line-strong)] bg-[rgba(122,16,10,0.18)] text-[var(--surface)] hover:border-[var(--surface)] hover:bg-[rgba(122,16,10,0.28)]"
             : "border-[var(--line-strong)] bg-[rgba(122,16,10,0.18)] text-[var(--surface)] hover:border-[var(--accent-line)] hover:bg-[var(--accent-soft)]"
         }`}
         aria-expanded={open}
@@ -36,8 +36,10 @@ export function MobileNav() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`archive-link border-b border-[var(--line)] py-3.5 ${
-                    active ? "text-[var(--accent-strong)]" : "text-[var(--muted)]"
+                  className={`archive-link border-b py-4 ${
+                    active
+                      ? "border-[var(--surface)] text-[var(--accent-strong)]"
+                      : "border-[var(--line)] text-[var(--muted)] hover:border-[var(--accent-line)] hover:text-[var(--surface)]"
                   }`}
                 >
                   <span className="block text-[1.2rem] font-medium leading-tight">{item.label}</span>

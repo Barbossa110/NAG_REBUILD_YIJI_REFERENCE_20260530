@@ -17,19 +17,6 @@ export default function AboutPage() {
     },
   ];
 
-  const scope = [
-    {
-      label: "Brand Positioning / 品牌定位",
-      zh: "Nearly Anything Goes 是一个策展式艺术限定零售空间。",
-      en: "Nearly Anything Goes: Curated Art Limited Retail Space.",
-    },
-    {
-      label: "Platform Scope / 平台方向",
-      zh: "主营业务：独家｜限定艺术品售卖 × 联名艺术品发布 × 艺术家商业化运营",
-      en: "Exclusive and limited-edition artworks, collaborative releases, and artist commercial operations.",
-    },
-  ];
-
   return (
     <PageShell
       eyebrow="About"
@@ -73,26 +60,7 @@ export default function AboutPage() {
                   <p className="font-display-cn text-[clamp(1.45rem,2.25vw,2.25rem)] leading-[1.38] text-[var(--surface)] text-pretty">
                     {item.zh}
                   </p>
-                  <p className="body-copy max-w-[36rem]">
-                    {item.en}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-10 border-y border-[var(--line)]">
-            {scope.map((item) => (
-              <article
-                key={item.label}
-                className="grid gap-6 border-b border-[var(--line)] py-8 last:border-b-0 md:grid-cols-[0.38fr_0.62fr] md:items-start"
-              >
-                <p className="eyebrow">{item.label}</p>
-                <div className="grid gap-5">
-                  <p className="font-display-cn text-[clamp(1.55rem,3vw,3rem)] leading-[1.08] text-[var(--surface)]">
-                    {item.zh}
-                  </p>
-                  <p className="body-copy max-w-[44rem]">
+              <p className="body-copy max-w-[36rem]">
                     {item.en}
                   </p>
                 </div>

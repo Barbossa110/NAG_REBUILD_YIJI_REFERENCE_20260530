@@ -37,6 +37,10 @@ export function toSlug(value: string) {
     .replace(/^-|-$/g, "");
 }
 
+export function toRouteSegment(value: string) {
+  return encodeURIComponent(value);
+}
+
 export function uniqueValues(values: string[]) {
   return [...new Set(values.filter(Boolean))].sort((a, b) =>
     a.localeCompare(b, "zh-Hans-CN"),

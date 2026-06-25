@@ -6,7 +6,7 @@ const heroImage = "/sources/branding/home-hero.png";
 export default function Home() {
   return (
     <main className="min-h-svh overflow-hidden bg-[var(--inverse)]">
-      <section className="relative min-h-svh overflow-hidden">
+      <section className="relative min-h-svh overflow-hidden bg-[var(--inverse)]">
         <Image
           src={withAssetPath(heroImage) ?? heroImage}
           alt="Nearly Anything Goes homepage visual"
@@ -16,18 +16,18 @@ export default function Home() {
           className="object-cover object-center"
           unoptimized
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.08)_0%,rgba(87,10,6,0.16)_40%,rgba(87,10,6,0.84)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(87,10,6,0.18)_0%,rgba(87,10,6,0.08)_28%,rgba(87,10,6,0.74)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(87,10,6,0.84)_0%,rgba(87,10,6,0.16)_44%,rgba(87,10,6,0.32)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_44%,rgba(255,28,12,0.16)_0%,rgba(255,28,12,0.24)_22%,rgba(87,10,6,0.68)_62%,rgba(26,2,0,0.94)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(87,10,6,0.28)_0%,rgba(87,10,6,0.08)_24%,rgba(87,10,6,0.66)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(26,2,0,0.88)_0%,rgba(87,10,6,0.7)_20%,rgba(255,24,8,0.12)_46%,rgba(87,10,6,0.16)_74%,rgba(26,2,0,0.72)_100%)]" />
         <div className="relative z-10 flex min-h-svh flex-col">
-          <div className="editorial-shell flex min-h-svh flex-col pb-[clamp(1.1rem,2.8vw,2.5rem)] pt-[76px] text-[var(--surface)] md:pt-[76px]">
-            <div className="max-w-2xl">
-              <h1 className="font-display-en max-w-[12ch] text-[clamp(3.05rem,7.4vw,7rem)] font-black leading-[0.9] tracking-[-0.06em] text-white md:max-w-[9.5ch]">
-                Nearly Anything
-                <br />
-                Goes
+          <div className="editorial-shell flex min-h-svh flex-col pb-[clamp(1rem,2vw,1.8rem)] pt-[104px] text-[var(--surface)] md:pt-[104px]">
+            <div className="mt-[clamp(7rem,18vh,12rem)] max-w-3xl md:mt-[clamp(11rem,26vh,16rem)]">
+              <h1 className="font-display-en max-w-[7.3ch] text-[clamp(3.65rem,7.5vw,9.5rem)] font-black leading-[0.88] tracking-[-0.07em] text-white">
+                <span className="block">Nearly</span>
+                <span className="block">Anything</span>
+                <span className="block">Goes</span>
               </h1>
-              <p className="mt-4 max-w-[13rem] text-[clamp(1.05rem,2vw,2rem)] leading-[1.12] text-white md:mt-5 md:max-w-[15rem] md:text-[clamp(1.2rem,2.2vw,2.2rem)]">
+              <p className="mt-7 max-w-[24rem] text-[clamp(1.55rem,2.15vw,2.45rem)] leading-[1.08] tracking-[-0.02em] text-white/96 md:mt-8 md:max-w-[22rem] md:text-[clamp(1.65rem,2vw,2.35rem)]">
                 策展式艺术限定零售平台
               </p>
             </div>

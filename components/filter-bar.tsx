@@ -110,7 +110,7 @@ function FilterLink({
   return (
     <Link
       href={href}
-      className={`inline-flex min-h-7 items-center border-b pb-0.5 text-[0.78rem] leading-[1.45] transition-colors duration-200 ease-[var(--motion)] ${
+      className={`archive-link inline-flex min-h-8 items-center border-b pb-0.5 text-[0.78rem] leading-[1.45] ${
         active
           ? "border-[var(--surface)] text-[var(--surface)]"
           : "border-transparent text-[var(--muted)] hover:border-[var(--accent-line)] hover:text-[var(--surface)]"

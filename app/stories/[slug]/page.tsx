@@ -8,6 +8,7 @@ import {
   getEventsBySlugs,
   getProductsBySlugs,
   getStoryBySlug,
+  toRouteSegment,
 } from "@/lib/filters";
 import { publicOptionalText } from "@/lib/public-display";
 
@@ -75,7 +76,7 @@ export default async function StoryDetailPage({ params }: StoryDetailPageProps) 
             title="Works"
             items={relatedProducts.map((product) => ({
               label: product.displayTitle,
-              href: `/products/${product.slug}`,
+              href: `/products/${toRouteSegment(product.slug)}`,
             }))}
           />
           <MetaList

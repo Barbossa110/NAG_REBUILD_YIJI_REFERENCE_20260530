@@ -7,12 +7,12 @@ export function ArtistPreview({ artist }: { artist: Artist }) {
   const mediums = publicMetadataList(artist.mediums);
 
   return (
-    <article className="group grid gap-8 border-t border-[var(--line)] py-8 transition-colors duration-300 ease-[var(--motion)] hover:border-[var(--accent-line)] md:grid-cols-[0.68fr_1.32fr] md:items-start md:py-10">
+    <article className="group grid gap-8 border-t border-[var(--line)] py-8 transition-colors duration-[var(--motion-ui)] ease-[var(--motion)] hover:border-[var(--accent-line)] focus-within:border-[var(--accent-line)] md:grid-cols-[0.68fr_1.32fr] md:items-start md:py-10">
       <div className="space-y-4">
         <span className="index-mark">AR</span>
         <p className="metadata normal-case tracking-[0.03em]">{artist.nameEn}</p>
-        <h3 className="font-display-cn text-[1.72rem] leading-[1.08] transition-colors duration-300 ease-[var(--motion)] group-hover:text-[var(--accent)] md:text-[2.28rem]">
-          <Link href={`/artists/${artist.slug}`}>{artist.nameZh}</Link>
+        <h3 className="font-display-cn text-[1.72rem] leading-[1.08] transition-colors duration-[var(--motion-ui)] ease-[var(--motion)] group-hover:text-[var(--accent)] md:text-[2.28rem]">
+          <Link href={`/artists/${artist.slug}`} className="archive-link">{artist.nameZh}</Link>
         </h3>
         {mediums.length ? (
           <p className="body-copy">{mediums.join(" / ")}</p>

@@ -7,20 +7,24 @@ import { primaryNavigation } from "@/lib/navigation";
 
 export function SiteFooter() {
   const pathname = usePathname();
+  const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+  const hideBrandBand = normalizedPathname === "/about";
 
-  if (pathname === "/") return null;
+  if (normalizedPathname === "/" || normalizedPathname === "/events") return null;
 
   return (
     <footer className="fine-rule mt-20">
       <div className="editorial-shell py-12 md:py-14">
-        <div className="grid gap-8 border-b border-[var(--line)] pb-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <BrandLogo className="max-w-[15rem]" sizes="15rem" />
-          <p className="body-copy max-w-3xl lg:justify-self-end">
-            A curated art limited retail platform where works, artists, events, and cultural life meet.
-          </p>
-        </div>
+        {hideBrandBand ? null : (
+          <div className="grid gap-8 border-b border-[var(--line)] pb-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <BrandLogo className="max-w-[15rem]" sizes="15rem" />
+            <p className="body-copy max-w-3xl lg:justify-self-end">
+              A curated art limited retail platform where works, artists, events, and cultural life meet.
+            </p>
+          </div>
+        )}
 
-        <div className="grid gap-8 pt-8 lg:grid-cols-[1.45fr_0.75fr]">
+        <div className={`grid gap-8 ${hideBrandBand ? "" : "pt-8"} lg:grid-cols-[1.45fr_0.75fr]`}>
           <nav aria-label="Footer primary navigation">
             <p className="section-kicker">Explore</p>
             <div className="mt-5 grid gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">

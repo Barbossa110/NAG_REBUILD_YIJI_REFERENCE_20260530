@@ -2,7 +2,7 @@ import type { Product } from "@/lib/types";
 
 export const products: Product[] = [
   {
-    "slug": "大悲宇宙佛头1jpg",
+    "slug": "dabeiyuzhou-buddha-head-1",
     "titleRaw": "大悲宇宙佛头1jpg",
     "displayTitle": "佛头 1",
     "artistSlug": "dabeiyuzhou",
@@ -20,7 +20,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "大悲宇宙佛头2jpg",
+    "slug": "dabeiyuzhou-buddha-head-2",
     "titleRaw": "大悲宇宙佛头2jpg",
     "displayTitle": "佛头 2",
     "artistSlug": "dabeiyuzhou",
@@ -38,7 +38,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "大悲宇宙佛头3jpg",
+    "slug": "dabeiyuzhou-buddha-head-3",
     "titleRaw": "大悲宇宙佛头3jpg",
     "displayTitle": "佛头 3",
     "artistSlug": "dabeiyuzhou",
@@ -56,7 +56,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "永生蝴蝶",
+    "slug": "eternal-butterfly",
     "titleRaw": "永生蝴蝶",
     "displayTitle": "永生蝴蝶",
     "artistSlug": "dabeiyuzhou",
@@ -74,7 +74,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "永生蝴蝶2",
+    "slug": "eternal-butterfly-2",
     "titleRaw": "永生蝴蝶2",
     "displayTitle": "永生蝴蝶 2",
     "artistSlug": "dabeiyuzhou",
@@ -128,7 +128,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "南瓜-3-pumpkin-3",
+    "slug": "pumpkin-3",
     "titleRaw": "南瓜 3 Pumpkin 3",
     "displayTitle": "南瓜 3 Pumpkin 3",
     "artistSlug": "jeremie-thircuir",
@@ -146,7 +146,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "大姜-giant-ginger",
+    "slug": "giant-ginger",
     "titleRaw": "大姜 Giant Ginger",
     "displayTitle": "大姜 Giant Ginger",
     "artistSlug": "jeremie-thircuir",
@@ -164,7 +164,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "好柿花生-good-things-happen",
+    "slug": "good-things-happen",
     "titleRaw": "好柿花生 Good Things happen",
     "displayTitle": "好柿花生 Good Things happen",
     "artistSlug": "jeremie-thircuir",
@@ -182,7 +182,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "姜-2-ginger-2",
+    "slug": "ginger-2",
     "titleRaw": "姜 2 Ginger 2",
     "displayTitle": "姜 2 Ginger 2",
     "artistSlug": "jeremie-thircuir",
@@ -200,7 +200,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "朝鲜蓟-1-artichoke-1",
+    "slug": "artichoke-1",
     "titleRaw": "朝鲜蓟 1 Artichoke 1",
     "displayTitle": "朝鲜蓟 1 Artichoke 1",
     "artistSlug": "jeremie-thircuir",
@@ -218,7 +218,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "柠檬-lemons",
+    "slug": "lemons",
     "titleRaw": "柠檬 Lemons",
     "displayTitle": "柠檬 Lemons",
     "artistSlug": "jeremie-thircuir",
@@ -236,7 +236,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "水果拼盘-fruit-platter",
+    "slug": "fruit-platter",
     "titleRaw": "水果拼盘 Fruit Platter",
     "displayTitle": "水果拼盘 Fruit Platter",
     "artistSlug": "jeremie-thircuir",
@@ -254,7 +254,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "玉米-corn",
+    "slug": "corn",
     "titleRaw": "玉米 Corn",
     "displayTitle": "玉米 Corn",
     "artistSlug": "jeremie-thircuir",
@@ -272,7 +272,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "芦笋-1-asparagus-1",
+    "slug": "asparagus-1",
     "titleRaw": "芦笋 1 Asparagus 1",
     "displayTitle": "芦笋 1 Asparagus 1",
     "artistSlug": "jeremie-thircuir",
@@ -290,7 +290,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "苦瓜-bittergourd",
+    "slug": "bittergourd",
     "titleRaw": "苦瓜 Bittergourd",
     "displayTitle": "苦瓜 Bittergourd",
     "artistSlug": "jeremie-thircuir",
@@ -308,7 +308,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "茄子-1-eggplant-1",
+    "slug": "eggplant-1",
     "titleRaw": "茄子 1 Eggplant 1",
     "displayTitle": "茄子 1 Eggplant 1",
     "artistSlug": "jeremie-thircuir",
@@ -326,7 +326,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "葫芦-1-hulu-1",
+    "slug": "hulu-1",
     "titleRaw": "葫芦 1 Hulu 1",
     "displayTitle": "葫芦 1 Hulu 1",
     "artistSlug": "jeremie-thircuir",
@@ -344,7 +344,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "葫芦-2-hulu-2",
+    "slug": "hulu-2",
     "titleRaw": "葫芦 2 Hulu 2",
     "displayTitle": "葫芦 2 Hulu 2",
     "artistSlug": "jeremie-thircuir",
@@ -362,7 +362,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "长葫芦-snake-gourd",
+    "slug": "snake-gourd",
     "titleRaw": "长葫芦 Snake Gourd",
     "displayTitle": "长葫芦 Snake Gourd",
     "artistSlug": "jeremie-thircuir",
@@ -380,7 +380,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "丹玉摇",
+    "slug": "dan-yu-yao",
     "titleRaw": "丹玉摇",
     "displayTitle": "丹玉摇",
     "artistSlug": "kong-yu",
@@ -398,7 +398,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "柑玉凝",
+    "slug": "gan-yu-ning",
     "titleRaw": "柑玉凝",
     "displayTitle": "柑玉凝",
     "artistSlug": "kong-yu",
@@ -416,7 +416,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "海晏瑶",
+    "slug": "hai-yan-yao",
     "titleRaw": "海晏瑶",
     "displayTitle": "海晏瑶",
     "artistSlug": "kong-yu",
@@ -434,7 +434,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "琥珀流",
+    "slug": "hu-po-liu",
     "titleRaw": "琥珀流",
     "displayTitle": "琥珀流",
     "artistSlug": "kong-yu",
@@ -452,7 +452,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "翠雾凝",
+    "slug": "cui-wu-ning",
     "titleRaw": "翠雾凝",
     "displayTitle": "翠雾凝",
     "artistSlug": "kong-yu",
@@ -614,7 +614,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "很烧的蜡烛-天蓝色",
+    "slug": "burning-candle-sky-blue",
     "titleRaw": "很烧的蜡烛.（天蓝色）png",
     "displayTitle": "很烧的蜡烛（天蓝色）",
     "artistSlug": "shan-xiaoming",
@@ -632,7 +632,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "很烧的蜡烛-暖橙色",
+    "slug": "burning-candle-warm-orange",
     "titleRaw": "很烧的蜡烛（暖橙色)",
     "displayTitle": "很烧的蜡烛（暖橙色)",
     "artistSlug": "shan-xiaoming",
@@ -650,7 +650,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "很烧的蜡烛-粉红色",
+    "slug": "burning-candle-pink",
     "titleRaw": "很烧的蜡烛（粉红色）",
     "displayTitle": "很烧的蜡烛（粉红色）",
     "artistSlug": "shan-xiaoming",
@@ -668,7 +668,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "很能装的盘子-天蓝色",
+    "slug": "generous-plate-sky-blue",
     "titleRaw": "很能装的盘子(天蓝色)",
     "displayTitle": "很能装的盘子(天蓝色)",
     "artistSlug": "shan-xiaoming",
@@ -686,7 +686,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "很能装的盘子-暖橙色",
+    "slug": "generous-plate-warm-orange",
     "titleRaw": "很能装的盘子(暖橙色）",
     "displayTitle": "很能装的盘子(暖橙色）",
     "artistSlug": "shan-xiaoming",
@@ -704,7 +704,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "很能装的盘子-粉红色",
+    "slug": "generous-plate-pink",
     "titleRaw": "很能装的盘子（粉红色）",
     "displayTitle": "很能装的盘子（粉红色）",
     "artistSlug": "shan-xiaoming",
@@ -722,7 +722,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "能量灯凳-白色",
+    "slug": "energy-lamp-stool-white",
     "titleRaw": "能量灯凳（白色)",
     "displayTitle": "能量灯凳（白色)",
     "artistSlug": "shan-xiaoming",
@@ -740,7 +740,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "能量灯凳-粉色",
+    "slug": "energy-lamp-stool-pink",
     "titleRaw": "能量灯凳（粉色）",
     "displayTitle": "能量灯凳（粉色）",
     "artistSlug": "shan-xiaoming",
@@ -758,7 +758,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "花心花瓶",
+    "slug": "flower-heart-vase",
     "titleRaw": "花心花瓶",
     "displayTitle": "花心花瓶",
     "artistSlug": "shan-xiaoming",
@@ -1028,7 +1028,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "呼吸的颜色1",
+    "slug": "breathing-color-1",
     "titleRaw": "呼吸的颜色1",
     "displayTitle": "呼吸的颜色1",
     "artistSlug": "xie-zhenlin",
@@ -1046,7 +1046,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "呼吸的颜色2",
+    "slug": "breathing-color-2",
     "titleRaw": "呼吸的颜色2",
     "displayTitle": "呼吸的颜色2",
     "artistSlug": "xie-zhenlin",
@@ -1064,7 +1064,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "呼吸的颜色3",
+    "slug": "breathing-color-3",
     "titleRaw": "呼吸的颜色3",
     "displayTitle": "呼吸的颜色3",
     "artistSlug": "xie-zhenlin",
@@ -1082,7 +1082,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "莫比乌斯环灯1",
+    "slug": "mobius-ring-lamp-1",
     "titleRaw": "莫比乌斯环灯1",
     "displayTitle": "莫比乌斯环灯1",
     "artistSlug": "xie-zhenlin",
@@ -1100,7 +1100,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "莫比乌斯环灯2",
+    "slug": "mobius-ring-lamp-2",
     "titleRaw": "莫比乌斯环灯2",
     "displayTitle": "莫比乌斯环灯2",
     "artistSlug": "xie-zhenlin",
@@ -1118,7 +1118,7 @@ export const products: Product[] = [
     "reviewStatus": "needs review"
   },
   {
-    "slug": "莫比乌斯环灯3",
+    "slug": "mobius-ring-lamp-3",
     "titleRaw": "莫比乌斯环灯3",
     "displayTitle": "莫比乌斯环灯3",
     "artistSlug": "xie-zhenlin",

@@ -24,7 +24,7 @@ export const events: EventItem[] = [
     city: "PLACEHOLDER / needs confirmation",
     location: "PLACEHOLDER / needs confirmation",
     artists: ["shen-tianyu", "kong-yu"],
-    products: ["琥珀流"],
+    products: ["hu-po-liu"],
     images: [],
     videos: [],
     summary:
